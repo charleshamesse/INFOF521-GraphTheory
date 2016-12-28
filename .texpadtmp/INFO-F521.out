@@ -1,0 +1,19 @@
+\BOOKMARK [0][-]{chapter.1}{The Basics}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Graphs}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{The degree of a vertex}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Paths and cycles}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Connectivity}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Bipartite graphs}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Matchings}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Matching in bipartite graphs}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Matching in general graphs}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Connectivity}{}% 10
+\BOOKMARK [1][-]{section.3.1}{2-Connected graphs and subgraphs}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{The structure of 3-connected graphs}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Menger's theorem}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Planar graphs}{}% 14
+\BOOKMARK [0][-]{chapter.5}{Colouring}{}% 15
+\BOOKMARK [1][-]{section.5.1}{Colouring maps and planar graphs}{chapter.5}% 16
+\BOOKMARK [1][-]{section.5.2}{Perfect graphs}{chapter.5}% 17
+\BOOKMARK [0][-]{chapter.6}{Random graphs}{}% 18
+\BOOKMARK [1][-]{section.6.1}{The notion of a random graph}{chapter.6}% 19

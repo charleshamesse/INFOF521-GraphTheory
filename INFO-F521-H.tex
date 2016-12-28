@@ -1,0 +1,52 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{eurosym}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\title{INFO-F521 - Graph Theory - Homework\\Treewidth}
+\date{\vspace{-7ex}
+Charles \textsc{Hamesse} (École Polytechnique)\\
+\vspace{2ex}December 2016}
+\begin{document}
+
+
+\maketitle
+%%%%%%%%%%%%%%%%
+% Main content
+%%%%%%%%%%%%%%%%
+\section{Properties}
+
+\begin{enumerate}
+	\item \textit{Treewidth is monotone under the operation of taking minors, that is, $tw(H) \leq tw(G)$ if H is a minor of G.\\}
+		We have that $\forall H \subseteq G$, the tree decomposition of $H$ is $(T, (V_t \cap V(H))_{t \in T})$ where $|(V_t \cap V(H)_{t \in T})|$ will never exceed $|V_t|$.
+		Therefore, as $tw(G)$ is defined as the minimum value that $\max_{x \in V(T)} | \{ v \in V(G) : x \in V(T_v \} | - 1 \}$, $|(V_t \cap V(H)_{t \in T})| \leq |V_t|$, we have $tw(H) \leq tw(G) ~~\forall H \subseteq G$.
+	\item \textit{Subtrees of a tree have the Helly property.\\}
+	Let's take $k = 3$ subtrees $T_1$, $T_2$ and $T_3$ and 3 vertices $a,b$ and $c$. Now, $a$ connects $T_1$ and $T_2$, $b$ connects $T_2$ and $T_3$, $c$ connects $T_3$ and $T_1$. As $T_3$ is connected to $T_1$ and $T_2$ via $b$ and $c$, it contains those, and their intersection $a$. Then, the intersection of all 3 subtrees is at least $a$. This can be generalised easily to any $k$, the pairwise connections will form a cycle in which trees "contain" others.
+	\item \textit{If $C$ is a clique of a graph $G$ and $(T, \{T_v\}_{v \in V(G)})$ is a tree decomposition of $G$ then there exists a node $x \in V (T)$ such that $x$ belongs to all subtrees $T_v$ of vertices $v \in C$.\\}
+	\item \textit{$\omega(G) \leq tw(G) + 1~~ \forall G$.\\}
+	In the example featured in the statement, we can observe that $\omega(G) = 3$ and $tw(G) = 2$. Using the definition of tree decompositions, we can generalise this in the way that all cliques of size $t$ will turn into vertices (in the tree decomposition) listing $t$ vertices (from the original graph $G$). As $tw(G)$ corresponds to the greatest number of original vertices listed in the tree decomposition vertices minus 1, we have $\omega(G) \leq tw(G) + 1~~ \forall G$.
+	\item \textit{[...]}
+	\item \textit{[...]}
+	\item \textit{[...]}
+	\item \textit{$\chi (G) \leq tw(G) +  1~~ \forall G$.\\}
+		We already know $\omega(G) \leq tw(G) + 1~~ \forall G$. Also, $\chi(G) \geq \omega(G)$ (but I don't think this will help). 
+	\item \textit{[...]}
+	\item \textit{If $G$ is obtained from $H$ by adding a universal vertex to $H$ then $tw(G) = tw(H) + 1$.\\}
+	Intuitively, I think this will have the same effect as plugging a new tree root to the previous graph. And this new vertex is connected to all other vertices and subtrees - that will raise $tw$ by one.
+	\item \textit{[...]}
+	\item \textit{[...]}
+	\item \textit{[...]}
+	\item \textit{[...]}
+	\item \textit{[...]}
+	\item \textit{[...]}
+	
+\end{enumerate}
+\end{document}
+
