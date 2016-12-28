@@ -10,48 +10,46 @@
 \contentsline {subsubsection}{Hall's theorem (1935)}{8}{section*.3}
 \contentsline {section}{\numberline {2.2}Matching in general graphs}{9}{section.2.2}
 \contentsline {subsubsection}{Tutte's theorem (1947)}{9}{section*.4}
-\contentsline {paragraph}{Corollary 1}{9}{section*.5}
-\contentsline {paragraph}{Corollary 2}{9}{section*.6}
+\contentsline {paragraph}{Corollary 1}{10}{section*.5}
+\contentsline {paragraph}{Corollary 2}{10}{section*.6}
 \contentsline {paragraph}{Trick}{10}{section*.7}
 \contentsline {subsubsection}{Tutte's proof 2}{10}{section*.8}
-\contentsline {chapter}{\numberline {3}Connectivity}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}2-Connected graphs and subgraphs}{11}{section.3.1}
-\contentsline {subsubsection}{Theorem: ear decomposition of 2-connected graphs}{12}{section*.9}
-\contentsline {section}{\numberline {3.2}The structure of 3-connected graphs}{12}{section.3.2}
-\contentsline {subsubsection}{Tutte's theorem}{12}{section*.10}
-\contentsline {section}{\numberline {3.3}Menger's theorem}{12}{section.3.3}
-\contentsline {subsubsection}{Case 1: $ab \notin E(G)$}{13}{section*.11}
-\contentsline {subsubsection}{Case 2: $ab \in E(G)$}{13}{section*.12}
-\contentsline {chapter}{\numberline {4}Planar graphs}{15}{chapter.4}
-\contentsline {subsubsection}{Lemma 1}{15}{section*.13}
-\contentsline {subsubsection}{Lemma 2}{16}{section*.14}
-\contentsline {subsubsection}{Lemma 3}{16}{section*.15}
-\contentsline {subsubsection}{Theorem 1: Euler's formula}{16}{section*.16}
-\contentsline {subsubsection}{Corollary 1}{16}{section*.17}
-\contentsline {subsubsection}{Corollary 2}{17}{section*.18}
-\contentsline {subsubsection}{Lemma 3}{17}{section*.19}
-\contentsline {subsubsection}{Corollary 3}{17}{section*.20}
-\contentsline {subsubsection}{Corollary 4}{17}{section*.21}
-\contentsline {subsubsection}{Theorem 2: Kuratowski (1930)}{17}{section*.22}
-\contentsline {chapter}{\numberline {5}Colouring}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Colouring maps and planar graphs}{19}{section.5.1}
-\contentsline {subsubsection}{The four colour conjecture (1852)}{19}{section*.23}
-\contentsline {subsubsection}{The five colour theorem (Kempe and Heawood, 1890)}{19}{section*.24}
-\contentsline {subsubsection}{Discharging method (Weinicke, 1904)}{20}{section*.25}
-\contentsline {subsubsection}{Theorem (Erdo's, 1950)}{21}{section*.26}
-\contentsline {section}{\numberline {5.2}Perfect graphs}{21}{section.5.2}
-\contentsline {chapter}{\numberline {6}Random graphs}{23}{chapter.6}
-\contentsline {section}{\numberline {6.1}The notion of a random graph}{23}{section.6.1}
-\contentsline {subsubsection}{Theorem}{23}{section*.27}
-\contentsline {subsubsection}{Theorem (Erd\IeC {\"o}'s, 1956)}{24}{section*.28}
-\contentsline {subsubsection}{Lemma}{24}{section*.29}
-\contentsline {subsubsection}{Lemma}{24}{section*.30}
-\contentsline {subsubsection}{First moment method}{26}{section*.31}
-\contentsline {subsubsection}{Local lemma}{26}{section*.32}
-\contentsline {subsubsection}{Union bound}{26}{section*.33}
-\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (symmetric version)}{27}{section*.34}
-\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (asymmetric version)}{27}{section*.35}
-\contentsline {subsubsection}{Hypergraph 2-coloring}{27}{section*.36}
-\contentsline {subsubsection}{Theorem}{27}{section*.37}
-\contentsline {subsubsection}{Constructive proof}{28}{section*.38}
-\contentsline {subsubsection}{Analysis (not for exam)}{28}{section*.39}
+\contentsline {chapter}{\numberline {3}Connectivity}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}2-Connected graphs and subgraphs}{13}{section.3.1}
+\contentsline {subsubsection}{Theorem: ear decomposition of 2-connected graphs}{14}{section*.9}
+\contentsline {section}{\numberline {3.2}The structure of 3-connected graphs}{14}{section.3.2}
+\contentsline {subsubsection}{Lemma}{14}{section*.10}
+\contentsline {section}{\numberline {3.3}Menger's theorem}{14}{section.3.3}
+\contentsline {chapter}{\numberline {4}Planar graphs}{17}{chapter.4}
+\contentsline {subsubsection}{Lemma 1}{17}{section*.11}
+\contentsline {subsubsection}{Lemma 2}{18}{section*.12}
+\contentsline {subsubsection}{Lemma 3}{18}{section*.13}
+\contentsline {subsubsection}{Theorem 1: Euler's formula}{18}{section*.14}
+\contentsline {subsubsection}{Corollary 1}{18}{section*.15}
+\contentsline {subsubsection}{Corollary 2}{19}{section*.16}
+\contentsline {subsubsection}{Lemma 3}{19}{section*.17}
+\contentsline {subsubsection}{Corollary 3}{19}{section*.18}
+\contentsline {subsubsection}{Corollary 4}{19}{section*.19}
+\contentsline {subsubsection}{Theorem 2: Kuratowski (1930)}{19}{section*.20}
+\contentsline {chapter}{\numberline {5}Colouring}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Colouring maps and planar graphs}{23}{section.5.1}
+\contentsline {subsubsection}{The four colour conjecture (1852)}{23}{section*.21}
+\contentsline {subsubsection}{The five colour theorem (Kempe and Heawood, 1890)}{23}{section*.22}
+\contentsline {subsubsection}{Discharging method (Weinicke, 1904)}{24}{section*.23}
+\contentsline {subsubsection}{Theorem (Erdo's, 1950)}{25}{section*.24}
+\contentsline {section}{\numberline {5.2}Perfect graphs}{25}{section.5.2}
+\contentsline {chapter}{\numberline {6}Random graphs}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}The notion of a random graph}{27}{section.6.1}
+\contentsline {subsubsection}{Theorem}{27}{section*.25}
+\contentsline {subsubsection}{Theorem (Erd\IeC {\"o}'s, 1956)}{28}{section*.26}
+\contentsline {subsubsection}{Lemma}{28}{section*.27}
+\contentsline {subsubsection}{Lemma}{28}{section*.28}
+\contentsline {subsubsection}{First moment method}{30}{section*.29}
+\contentsline {subsubsection}{Local lemma}{30}{section*.30}
+\contentsline {subsubsection}{Union bound}{30}{section*.31}
+\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (symmetric version)}{31}{section*.32}
+\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (asymmetric version)}{31}{section*.33}
+\contentsline {subsubsection}{Hypergraph 2-coloring}{31}{section*.34}
+\contentsline {subsubsection}{Theorem}{31}{section*.35}
+\contentsline {subsubsection}{Constructive proof}{32}{section*.36}
+\contentsline {subsubsection}{Analysis (not for exam)}{32}{section*.37}

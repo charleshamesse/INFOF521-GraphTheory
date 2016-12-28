@@ -96,7 +96,9 @@ Given the graph $G = (V, E)$, the set $M \subseteq E$ is a matching if all edges
 
 For the graph $G$, $X \subseteq V$ is a \textit{vertex cover} if every edge in $E$ has at least one endpoint in $X$.\\
 
-A \textit{perfect matching} (a.k.a. 1-factor) is a matching which matches all vertices of the graph. That is, every vertex of the graph is incident to exactly one edge of the matching. Every perfect matching is maximum and hence maximal. In some literature, the term complete matching is used. A perfect matching is also a minimum-size edge cover. 
+A \textit{perfect matching} (a.k.a. 1-factor) is a matching which matches all vertices of the graph. That is, every vertex of the graph is incident to exactly one edge of the matching. Every perfect matching is maximum and hence maximal. In some literature, the term complete matching is used. A perfect matching is also a minimum-size edge cover. \\
+
+Observation: if $M$ is a matching and $X$ a vertex cover, then $|X| \geq |M|$. Corollary: the minimum size of a vertex cover is $\geq$ the maximum size of a matching.
 
 \section{Matching in bipartite graphs}
 For this whole section, we let $G = (V, E)$ be a fixed bipartite graph with bipartition $\{A, B \}$. Vertices denoted as $a, a'$, etc will be assumed to lie in $A$, vertices noted as $b$ etc will lie in $B$.\\
@@ -123,8 +125,14 @@ Let $G = (V,E)$ be a bipartite graph with bipartition $V = (A, B)$. Then the max
 	
 \subsubsection{Hall's theorem (1935)} 
 
-\textit{$G$ contains a matching of $A$ if and only if $|N(S) \geq |S|$ for all $S \subseteq A$).}\\
+\textit{If $G$ is bipartite with partitions $A,B$, it contains a matching of $A$ if and only if $|N(S) \geq |S|$ for all $S \subseteq A$).}\\
 
+Here, $N(S) = \{ x \in B $ s.t. $x$ is adjacent to some vertex in $S \}$.\\
+
+\begin{figure}[h]
+	\center
+	\includegraphics[width=0.3\linewidth]{img/2-1.png}
+\end{figure}  
 Let $G = (V, E)$ be a bipartite graph with bipartition $V = (A, B)$. Then (keeping in mind that for each partition $X$, any $x \in X$ isn't connected to any other $x' \in X$):
 \begin{eqnarray}
 	A \text{ can be matched } \iff |N(S)| \geq |S| ~~\forall S \subseteq A
@@ -139,11 +147,20 @@ Proving both implications:
 		is equivalent to:
 		\begin{eqnarray}
 			A \text{ cannot be matched } &\implies& \exists S \subseteq A : N(S) < |S|
-		\end{eqnarray} Let $M$ be a maximum matching. Thus $|M| < |A|$. By König's theorem, there exists a vertex cover $U \subseteq V$ of size $|U| = |M| < |A|$.
-	\item Let $S := A - U$. Then $N(S) \subseteq B$. On the other hand, $|S| + |A \cap U| = |A| > |U| = |A \cap U| + |B \cap U|$. Hence $|B \cap U| < |S|$, and as $|N(S)| \leq |B \cap U|$ we get:
+		\end{eqnarray} 
+	\item If $G$ contains no matching of $A$, then by König's theorem, it has a cover $U$ with fewer than $A$ vertices:
 		\begin{eqnarray}
-			|N(S)| < |S|
+			|A \cap U| + |B \cap U| < |A|
 		\end{eqnarray}
+		hence:
+		\begin{eqnarray}
+			|B \cap U| < |A| - |A \cap U| = |A \setminus (A \cap U)|
+		\end{eqnarray}
+	\item By defintion of $U$, $G$ has no edge between $A \setminus (A \cap U)$ and $B \setminus (B \cap U)$. Let $A \setminus (A \cap U)$:
+		\begin{eqnarray}
+			|N(S)| \leq |B \cap U| < |A \setminus (A \cap U)| = |S|
+		\end{eqnarray} 
+		and the marriage condition fails.
 \end{enumerate}
 
 	\section{Matching in general graphs}
@@ -156,7 +173,7 @@ Proving both implications:
 		
 		\textit{A graph $G$ has a 1-factor if and only if $q(G - S) \leq |S|$ for all $S \subseteq V(G)$.}\\
 		
-		Obviously, every odd component of $G - S$ is linked in $G$ to $S$ by at least one edge from $M$ (because of parity). Hence $|S| \geq q(G - S)$. Let's prove the contrapositive: assume there isn't a perfect matching. We want to show:
+		Note that a 1-factor corresponds to a perfect matching. Obviously, every odd component of $G - S$ is linked to $S$ by at least one edge from the matching $M$ (because of parity). Hence $|S| \geq q(G - S)$. Let's prove the contrapositive: assume there isn't a perfect matching. We want to show:
 			\begin{eqnarray}
 				\exists S \subseteq V : |S| < q(G - S)
 			\end{eqnarray} 
@@ -215,7 +232,7 @@ Proving both implications:
 	
 	The \textit{vertex connectivity} of $G$ is the maximum $k$ so that $G$ is $k$-connected.\\
 	
-	A vertex $v \in V(G)$ is a cut vertex of a connected graph $G$ is $G -V$ is not connected.
+	A vertex $v \in V(G)$ is a cut vertex of a connected graph $G$ is $G - \{ v \}$  is not connected.
 
 	\section{2-Connected graphs and subgraphs}
 		There are at least 3 vertices and there isn't any cut vertex.\\
@@ -248,7 +265,7 @@ Proving both implications:
 		
 		
 	\section{The structure of 3-connected graphs}
-		\subsubsection{Tutte's theorem} 
+		\subsubsection{Lemma} 
 		\textit{If $G$ is 3-connected and $|V(G)| \geq 5$, then $\exists e \in E (G)$ such that $G / e$ is still 3-connected.}\\
 		
 		Note that $G / e$ is the graph $G$ following the contraction of the edge $e$.\\
@@ -266,25 +283,22 @@ Proving both implications:
 	\section{Menger's theorem}
 		\textit{Let $G = (V,E)$ be a graph and $A, B \subseteq V$. Then the minimum number of vertices separating $A$ from $B$ in $G$ is equal to the maximum number of disjoint $A-B$ paths in $G$.\\}
 		
-		That means that $G$ is connected if and only if every pair $a,b$ of distinct vertices are linked by $k$ independent paths (no vertex in common except for $a$ and $b$). 
+		That means that $G$ is connected $\iff$ every pair $a,b$ of distinct vertices are linked by $k$ independent paths (no vertex in common except for $a$ and $b$). 
 		
 		\begin{enumerate}
-			\item Proof $\impliedby$: Take distinct $a ,b \in V(G)$. Since there are $k$ independent $a-b$ paths and at least $k-1$ of these have at least one internal vertex, $G$ has $\geq 2 + j - 1 = k + 1$ vertices. Moreover, there is no $Y \subseteq V(G)$ of size less than $k$ such that $G - Y$ is not connected, because o/w! Pick $a,b$ in distinct components of $G - Y$. Every $a-b$ path goes through $Y$, hence there cannot be $k$ independent $a-b$ paths.
+			\item Proof $\impliedby$: Take distinct $a ,b \in V(G)$. Since there are $k$ independent $a-b$ paths and at least $k-1$ of these have at least one internal vertex, $G$ has $\geq 2 + k - 1 = k + 1$ vertices. Moreover, there is no $Y \subseteq V(G)$ of size less than $k$ such that $G - Y$ is not connected, because o/w: pick $a,b$ in distinct components of $G - Y$. Every $a-b$ path goes through $Y$, hence there cannot be $k$ independent $a-b$ paths.
 			\item Proof $\implies$: consider two distinct vertices $a,b \in V(G)$. 
-		\end{enumerate}
-		
-		\subsubsection{Case 1: $ab \notin E(G)$}
+		\begin{enumerate}
+		\item{Case 1: $ab \notin E(G)$}
 		Let $A := N(a)$ and $B := N(b)$.
 		If there are $k$ disjoint $A-B$ paths then there are $k$ such paths avoiding $a,b$ and we see that there are $k$ independent paths in $G$.  Observe $|A| \geq k$ and $|B| \geq k$.\\
 		
-		If $\not{\exists} k$ disjoint $A-B$ paths then $\exists A-B$ separation $Y$ of size $< k$ but this contradicts the fact that $G$ is $k-connected$.
+		If $\not{\exists} k$ disjoint $A-B$ paths then $\exists A-B$ separation $Y$ of size $< k$ but this contradicts the fact that $G$ is $k$-connected.
 		
-		\subsubsection{Case 2: $ab \in E(G)$}
-		Let $A := N(a) - \{b\}$ and $B := N(b) - \{a\}$. Then $|A| \geq k -1$ and $|B| \geq k - 1$.\\
-		
-		As always when we have an edge that's annoying, we try to contract it or to delete it.\\
-		
-		Consider  $G - ab$. This graph is $(k-1)$-connected (this always stands for $k$-connected graphs). And we can find $(k-1)$ disjoint $A-B$ paths in $G - ab$ avoiding $a,b$. So adding $a,b$ and using the edge $ab$ we get $k$ independent $a-b$ paths in $G$. 
+		\item{Case 2: $ab \in E(G)$}
+		Let $A := N(a) - \{b\}$ and $B := N(b) - \{a\}$. Then $|A| \geq k -1$ and $|B| \geq k - 1$. As always when we have an edge that's annoying, we try to contract it or to delete it:  consider  $G - ab$. This graph is $(k-1)$-connected (this always stands for $k$-connected graphs). And we can find $(k-1)$ disjoint $A-B$ paths in $G - ab$ avoiding $a,b$. So adding $a,b$ and using the edge $ab$ we get $k$ independent $a-b$ paths in $G$. 
+		\end{enumerate} 
+		\end{enumerate}
 		
 		
 \chapter{Planar graphs}
@@ -341,7 +355,7 @@ Proving both implications:
 		\end{enumerate}
 		
 		\subsubsection{Corollary 1} 
-		\textit{If $G$ is an $n$-vertex plane graph with $n$ being at least $3$, then $G$ has at most $3n - 6$ edges.}
+		\textit{If $G$ is an $n$-vertex plane graph with $n$ being at least $3$, then $G$ has at most $3n - 6$ edges.\\}
 		
 		With my assumption WLOG that $G$ is maximally plane, i.e. $G$ is a plane triangulation. Let $m := |E(G)|$ and $f := |F(G)|$.
 		\begin{eqnarray}
@@ -387,22 +401,46 @@ Proving both implications:
 			\item $\impliedby$: We first prove the statement in the case that $G$ is 3-connected. That is, we will show: "$G$ 3-connected and has neither $K_5$ or $K_{3,3}$ as minor $\implies$ $G$ is planar", by reduction on $|V(G)|$.
 				\begin{enumerate}
 					\item Base case: $|V(G)| = 4$. Then $G = K_4$ and is planar (every $k$-connected graph has at least $k+1$ vertices).
-					\item Inductive step: $|V(G)| \geq 5$. By Tutte's theorem, there is an edge $xy \in E(G)$ such that when we contract (we get $G \setminus xy$), the graph is 3-connected. Note that $G \setminus xy$ has no $K_5$ nor $K_{3,3}$ minor (by transitivity of the minor relation), thus $G \setminus xy$ is planar by induction. Let $v_{xy}$ be the vertex resulting from the edge contraction. Consider a drawing of $G \setminus xy$ in the plane. The plane graph $(G \setminus xy) - v_{xy}$ is 2-connected. In particular, each face is bounded by a cycle of that graph. Let $C$ denote the cycle bounding the face where $v_{xy}$ was drawn. Then all neighbours of $v_{xy}$ in $G \setminus xy$ are on $C$. Let:
+					\item Inductive step: $|V(G)| \geq 5$. By Tutte's theorem, there is an edge $xy \in E(G)$ such that when we contract (we get $G \setminus xy$), the graph is 3-connected. Note that $G \setminus xy$ has no $K_5$ nor $K_{3,3}$ minor (by transitivity of the minor relation), thus $G \setminus xy$ is planar by induction. Let $v_{xy}$ be the vertex resulting from the edge contraction. Consider a drawing of $G \setminus xy$ in the plane. The plane graph $(G \setminus xy) - v_{xy}$ is 2-connected. In particular, each face is bounded by a cycle of that graph. Let $C$ denote the cycle bounding the face where $v_{xy}$ was drawn.
+\begin{figure}[h]
+	\center
+	\includegraphics[width=0.3\linewidth]{img/4-1.png}
+\end{figure}
+
+Then all neighbours of $v_{xy}$ in $G \setminus xy$ are on $C$. Let:
 						\begin{eqnarray}
 							X &:=& \{ v \in V(C) : vx \in E(G)\}\\
 							Y &:=& \{ v \in V(C) : vy \in E(G) \}
 						\end{eqnarray}
 						Note that $|X| \geq 2$ and $|Y| \geq 2$, since $G$ is 3-connected.\\
-						
-						Consider the plane graph $H := (G \setminus xy) - \{ vy : v \in Y -X \}$. Note that all the remaining edges are at least adjacent to $X$.
+						\begin{figure}[h]
+	\center
+	\includegraphics[width=0.3\linewidth]{img/4-2.png}
+\end{figure}
+
+Consider the plane graph $H := (G \setminus xy) - \{ vy : v \in Y -X \}$. Note that all the remaining edges are at least adjacent to $X$.
 						\begin{enumerate}
-							\item Vertices of $X$ define intervals of $C$. One can see $H$ as a plane drawing of $G - y$ (where $v_{xy}$ plays the role of $x$).
+							\item Vertices of $X$ define intervals of $C$. One can see $H$ as a plane drawing of $G - y$ (where $v_{xy}$ plays the role of $x$). Our aim is to add $y$ to obtain a drawing of $G$.
 							\item If there exists a single interval containing all of $Y$ then we can extend this drawing to a drawing  of $G$ by adding $y$ in the face made by the vertices of $Y$.
 							\item Now let's assume this is not the case. We will show that this leads to a contradiction (and this $Y$ must be contained in a single interval).
 								\begin{enumerate}
-									\item $|X \cap Y| \geq 3$, then there is a $K_5$ minor in $G$: let $a,b,c, \in X \cap Y$ be distinct. Consider the minor of $G$ obtained by contracting each of these three paths into edges.  Then in that minor $\{ a,b,c,x,y \}$ are pairwise linked ($a,b,c$ are a triangle, $x$ and $y$ are both connected to all $a,b,c$). Hence $K_5$ is a minor of $G$. Contradiction.
-									\item $|X \cap Y| \leq 2$, then there is a $K_{3,3}$ minor in $G$: the idea is to find 
+									\item $|X \cap Y| \geq 3$, then there is a $K_5$ minor in $G$.
+									\begin{figure}[h]
+	\center
+	\includegraphics[width=0.3\linewidth]{img/4-3.png}
+\end{figure}
+
+Let $a,b,c \in X \cap Y$ be distinct. Consider the minor of $G$ obtained by contracting each of these three paths into edges.
+			
+			Then in that minor $\{ a,b,c,x,y \}$ are pairwise linked ($a,b,c$ are a triangle, $x$ and $y$ are both connected to all $a,b,c$). Hence $K_5$ is a minor of $G$. Contradiction.
 									
+
+
+									\item $|X \cap Y| \leq 2$, then there is a $K_{3,3}$ minor in $G$: 
+									\begin{figure}[h]
+	\center
+	\includegraphics[width=0.3\linewidth]{img/4-4.png}
+\end{figure}
 								\end{enumerate}
 						\end{enumerate} 
 				\end{enumerate}
