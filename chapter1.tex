@@ -1,0 +1,48 @@
+
+\chapter{The Basics}
+	\section{Graphs}
+		A \textit{graph} is a pair $G = (V, E)$ of sets such that $E \subseteq [V]^2$: the elements of $E$ are 2-element subsets of $V$. The elements of $V$ are the \textit{vertices} (or \textit{nodes}, or \textit{points}) and the elements of $E$ are the \textit{edges} (or \textit{lines}). \\
+		
+		The number of vertices of a graph $G$ is its \textit{order}, written as $|G|$. The number of edges is noted $||G||$. \\
+		
+		Two vertices $x, y$ of $G$ are \textit{adjacent} or \textit{neighbours} if $x y$ is an edge of $G$. Two edges $e \neq f$ are adjacent if they have an end in common. If all the vertices of $G$ are pairwise adjacent, then $G$ is complete. A complete graph on $n$ vertices is a $K^n$ - a $K^3$ is a triangle.\\ 
+		
+		Let $G = (V, E)$ and $G' = (V', E')$ be two graphs. We call $G$ and $G'$ \textit{isomorphic}, and write $G \simeq G'$, if there exists a bijection $\varphi: V \rightarrow V'$ with $xy \in E \iff \varphi(x) \varphi(y) \in E'$ for all $x, y \in V$. Such a map $\varphi$ is called an \textit{isomorphism}; if $G = G'$, it is called an \textit{automorphism}. \\
+		
+		We set $G \cup G' := (V \cup V', E \cup E')$, the intersection is defined similarly with $\cap$. If $G \cap G' = \emptyset$, then $G$ and $G'$ are \textit{disjoint}. If $V' \subseteq V$ and $E' \subseteq E$, then $G'$ is a \textit{subgraph} of $G$ and $G$ is a supergraph of $G'$.\\
+		
+		If $G' \subseteq G$ and $G'$ contains all the edges $xy \in E$ with $x, y \in V'$, then $G'$ is an \textit{induced subgraph} of $G$; we say that $V'$ \textit{induces} or \textit{spans} $G'$ in $G$.  
+		
+	\section{The degree of a vertex}
+		Let $G = (V, E)$ be a non-empty graph. The set of neighbours of a vertex $v$ in $G$ is denoted $N_G (v)$, or briefly $N(v)$. In other words, the neighbourhood of a vertex $v$ in $G$ is the induced subgraph of $G$ consisting of all vertices adjacent to $v$. \\
+	
+		The \textit{degree} (or \textit{valency}) $d_G (v) = d(v)$ of a vertex $v$ is the number $|E(v)|$ of edges at $v$; this is equal to the number of neighbours of $v$. A vertex of degree 0 is $isolated$. \\
+		
+		The number $\delta(G) := \min~ \{~ d(v) ~| ~v \in V ~\}$ is the \textit{minimum degree} of $G$, the number $\Delta(G) := \max ~\{~ d(v) ~|~ v \in V ~\}$ is the \textit{maximum degree}.\\
+		
+		If all the vertices of $G$ have the same degree $k$, then $G$ is \textit{k-regular}, or simply \textit{regular}. A \textit{3-regular} graph is called \textit{cubic}.
+	
+	\section{Paths and cycles}
+		A \textit{path} is a non-empty graph $P = (V, E)$ of the form:
+		\begin{eqnarray*}
+			V = \{x_0, x_1, \dotsb, x_k \} ~~~~~~ E = \{x_0x_1, x_1x_2, \dotsb, x_{k-1}x_k\},
+		\end{eqnarray*}		
+		where the $x_i$ are all distinct. The vertices $x_0$ and $x_k$ are \textit{linked} by $P$ and are called its \textit{endvertices} or \textit{ends}. The other vertices are called the \textit{innervertices}.\\
+		
+		For $P$ a path from $x_0$ to $x_k$, we write with $0 \leq i \leq j \leq k$:
+		\begin{eqnarray*}
+			Px_i &:=& x_0 ... x_i\\
+			x_iP &:=& x_i ... x_k\\
+			x_iPx_j &=& x_i ... x_j
+		\end{eqnarray*}
+	
+	\section{Connectivity}
+		A non-empty graph $G$ is called \textit{connected} if any two vertices are linked by a path in $G$. If $U \subseteq V(G)$ and $G[U]$ is connected, we also call $U$ itself connected in $G$.\\
+		
+		A graph $G$ is \textit{k-connected} (for $k \in \mathbb{N}$) if $|G| > k$ and $G - X$ is connected for every set $X \subseteq V$ with $|X| < k$. In other words, no two vertices of $G$ are separated by fewer than $k$ other vertices.
+		
+	\section{Bipartite graphs}
+		Let $r \geq 2$ be an integer. A graph $G = (V, E)$ is called \textit{r-partite} if $V$ admits a partition into $r$ classes such that every edge has its ends in different classes: vertices in the same partition class must no be adjacent. Instead of "2-partite", one usually says \textit{bipartite}.\\
+		
+		An $r$-partite graph in which every two vertices from different partition classes are adjacent is called \textit{complete}; the complete $r$-partite graphs for all $r$ together are the \textit{complete multipartite graphs}.
+
