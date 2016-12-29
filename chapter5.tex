@@ -4,10 +4,10 @@ A vertex colouring of a graph $G = (V,E)$ is a map $\phi: V \rightarrow S$ such 
 
 If $\phi$ is a $k-$coloring, $|S| \leq k$. Also, we define the \textit{chromatic number} $\chi$ as:
 \begin{eqnarray}
-	\chi (G) := \min \{ k : \exists k-\text{colouring of }G \}
+	\chi (G) := \min \{ k : \exists k\text{-colouring of }G \}
 \end{eqnarray}
 
-A graph $G$ with $\chi_{G} = k$ is called $k-$chromatic; if $\chi_{G} \leq q$, we call $G$ $k-$colourable.\\
+A graph $G$ with $\chi_{G} = k$ is called $k-$chromatic; if $\chi_{G} \leq k$, we call $G$ $k-$colourable.\\
 
 Note that $k-$colouring is nothing but a vertex parition into $k$ independent sets, now called \textit{colour classes}. The non-trivial 2-colourable graphs, for example, are precisely the bipartite graphs.
 
@@ -32,7 +32,7 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 				\end{eqnarray}
 				Now if this average is strictly less than 6, there is at least one vertex $v$ with $d(v) \leq 5$.
 			\item If $d(v) = 4$, then consider a 5-colouring of $G-v$, one colour is available at $v$, done.
-			\item If $d(v) = 5$, showing that $\chi_{G}$ could be 6 is now quite straightforward, think of removing $v$ and then putting it back in $G$). Now we have a potential problem if we consider a 5-colouring: there must be two distinct non-adjacent vertices $x, y$ in the neighbours of $v$ such that $xy \notin E(G)$. We will first contract $xv$ and $yv$ (thus keeping the planar property, so we can apply induction). By induction, $G / \{ vx, vy \}$ has a 5-colouring $\phi'$. Let:
+			\item If $d(v) = 5$, showing that $\chi_{G}$ could be 6 is now quite straightforward, think of removing $v$ and then putting it back in $G$. Now we have a potential problem if we consider a 5-colouring: there must be two distinct non-adjacent vertices $x, y$ in the neighbours of $v$ such that $xy \notin E(G)$. We will first contract $xv$ and $yv$ (thus keeping the planar property, so we can apply induction). By induction, $G / \{ vx, vy \}$ has a 5-colouring $\phi'$. Let:
 				\begin{eqnarray}
 					\phi(w) &:=& \phi'(w) ~\forall w\ \in V(G) - \{ vx, vy \}\\
 					\phi(x) &:=& \phi(v) := \phi(y) = \phi'(\text{contracted vertex})
@@ -42,11 +42,11 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 		
 		
 		\subsubsection{Discharging method (Weinicke, 1904)}
-		\textit{One example to prove above's theorem. If $G$ is a plane triangulation and $G$ has minimum degree, then $\exists vw \in E(G)$ such that $d(v) = 5$ and $d(w) \in \{ 5, 6 \}$.\\}
+		\textit{One example to prove above's theorem. If $G$ is a plane triangulation and $G$ has minimum degree $5$, then $\exists vw \in E(G)$ such that $d(v) = 5$ and $d(w) \in \{ 5, 6 \}$.\\}
 		
-		Put a charge of 6-$d(v)$ on each $v \ in (G)$ with:
+		Put a charge of 6-$d(v)$ on each $v \in (G)$ with:
 		\begin{eqnarray}
-			\sum_{v \in V(G)} \text{charge}(v) &=& 6 |V(G)| - \sum_{v \ in V(G)} d(v) = 6 |V(G)| - 2 |E(G)|\\
+			\sum_{v \in V(G)} \text{charge}(v) &=& 6 |V(G)| - \sum_{v \in V(G)} d(v) = 6 |V(G)| - 2 |E(G)|\\
 			&=& 6 |V(G)| - 2 (3|V(G)| - 6) \\
 			&=& 12 > 0
 		\end{eqnarray}
@@ -93,5 +93,89 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 	So the clique size is a lower bound, but at times this can be a very bad bound. For bipartite graphs, we have equality, but that's not always so.
 	
 	\section{Perfect graphs}
-		A graph $G$ is \textit{perfect} if $\chi(H) = w(H)$ for all induced subgraphs $H$ of $G$. For example, bipartite graphs are perfect.
+		
+		We use the notation:
+		\begin{itemize}
+			\item $\omega(G) = $ max size of a clique in $G$
+			\item $\alpha(G)$ = max size of a stable set (= an independent set) 
+		\end{itemize}
+		
+		Clearly, $\chi(G) \geq \omega(G) ~\forall G$.\\
+		
+		A graph $G$ is \textit{perfect} if $\chi(H) = \omega(H)$ for all induced subgraphs $H$ of $G$. For example, bipartite graphs are perfect.\\
 
+	\subsubsection{Weak perfect graph conjecture}
+	\textit{A graph $G$ is perfect $\iff$ $\bar{G}$ is perfect, where $\bar{G}$ is the complement of $G$ (edges become non-edges and vice-versa).\\}
+	
+	It has been proved by Lovász in 1972.
+	
+	\subsubsection{Strong perfect graph conjecture}
+	\textit{A graph $G$ is perfect $\iff$ $G$ does not contain an odd cycle of length $\geq 5$ as an induced subgraph nor a complement of an odd cycle of length $\geq 5$.\\}
+	
+	This has been proved in 2004 by [...].
+	
+	\subsubsection{Theorem (Lovász, 1972)}
+	\textit{$G$ is perfect $\iff \alpha(H) \omega(H) \geq |V(H)| ~ \forall$ induced subgraphs $H$ of $G$.\\}
+	
+	\begin{enumerate}
+		\item $\implies$: if $H$ is an induced subgraph of $G$, then:
+			\begin{eqnarray}
+				\alpha(H) \geq \frac{|V(H)|}{\alpha(H)} = \frac{|V(H)|}{\omega (H)}
+			\end{eqnarray}
+			which is true for every graph. Indeed, if $G$ is perfect, then every induced subgraph $H$ of $G$ can be partitioned into at most $\omega(H)$ colour classes, each containing at most $\alpha(H)$ vertices.
+		\item $\impliedby$: by induction on $|V(G)|$.
+			\begin{itemize}
+				\item Base case: $|V(G)| =1$, $G$ is the only induced subgraph:\begin{eqnarray}
+					\alpha(H) \omega(H) \geq |V(H)| = 1
+				\end{eqnarray} 
+				\item Inductive step: we have to show that $\chi(H) = \omega(H) ~\forall$ induced subgraph $H$ of $G$. If $|V(H)| < |V(H)|$, then we already know that $H$ is perfect thanks to induction. So it remains to show $\chi(G) = \omega(G)$, by contradiction: assume $\chi(G) > \omega(G) \iff \chi(G) \geq \omega(G) + 1$.\\
+					
+					Observe: if $U$ a a stable set, $U \neq \emptyset$, then $\chi(G-U) = \omega(G-U) \leq \omega(G)$. On the other hand, $\chi(G) \leq \chi(G-U) + 1 \leq \omega(G) + 1$. Hence $\chi(G) = \omega(G) + 1$ and $\chi(G-U) = \omega(G-U) = \omega(G)$.\\
+					
+					Let $A_0 = \{u_1, u_2, ..., u_{\alpha}$ be a stable set of $G$ of size $\alpha(G)$. Let $\alpha = alpha(G)$ and $\omega = \omega(G)$. For each $i \in \{1, ..., \alpha\}$, consider a colouring of $G - U$ with $\chi(G \setminus U_i) = \omega$ colours and let (...?) $A_{(i-1) \omega + 1}, ..., A_{(i-1) \omega + \omega - 1}, A_\omega$ denote the colour classes.\\
+					
+					For each $j \in \{0,1,..., \omega\}$, let $K_j$ be a clique of $G - K_j$ of size $\omega(G - K_j = \omega(G) = \omega$.\\
+					
+					Claim: $\forall i,j \in \{0,1,...,\alpha \omega \}$:
+					\begin{eqnarray}
+						|A_i \cap K_j| = \begin{cases}
+							0 ~~~ \text{if } i = j\\
+							1 ~~~ \text{if } i \neq j
+						\end{cases}
+					\end{eqnarray}
+					
+					Proof: Clearly, $|A_i \cap K_j| = 0$ if $i=j$. Now let's show that  $|A_i \cap K_j| = 0$ implies $i = j$: assume  $|A_i \cap K_j| = 0$.
+						\begin{enumerate}
+							\item $i \neq 0$: then $A$ is the colour class of one of our $\alpha$-colouring, say $G - U_l$.
+								Since $K_j$ avoids $A_i$ and $K_j = \omega$, $K_j$ must intersect all the other $\omega - 1 $ colour classes in one vertex and must also contain $U_l$.\\
+								
+								This implies $U_l \notin K_j, ~\forall t \in \{1, ..., \alpha \}, ~t \neq l$.\\
+								 
+								Moreover, for such an index $t$, $K_j$ intersects all $\omega$ colour classes of the colouring of $G - U_t$ we considered.\\
+								
+								Also, $j \neq 0$ since $U_l \cap K_j$ but $K_0 \cap A_0 = \emptyset$.\\
+								 
+								Furthermore, $K_j$ intersects $A_q ~ \forall q \in \{1, ..., \alpha \omega \} - \{i \}$ and this $j \neq q$, then finally $j = i$.\\
+								
+								Let $A$ be the $(\alpha \omega + 1) \times n$ matrix where the $i$-th row is the characteristic vector of $A_i$.\\
+								
+								Let $B$ be the $n \times (\alpha \omega + 1)$ matrix where the $j$-th column is the characteristic vector of $K_j$.\\
+								By the claim, $AB$ is the following $(\alpha \omega + 1) \times (\alpha \omega + 1)$ matrix.\\
+								$AB$ is invertible, it has the following inverse: 
+								[...] \\
+								
+								Thus $\det(AB) \neq 0$, hence rank$(A) \geq (\alpha \omega + 1)$ and thus $\cap \geq (\alpha \omega + 1)$ - contradicting the assumption $\alpha \omega \geq n$.
+						\end{enumerate}
+			\end{itemize}
+	\end{enumerate}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

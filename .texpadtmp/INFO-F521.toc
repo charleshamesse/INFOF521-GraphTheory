@@ -38,18 +38,23 @@
 \contentsline {subsubsection}{Discharging method (Weinicke, 1904)}{24}{section*.23}
 \contentsline {subsubsection}{Theorem (Erdo's, 1950)}{25}{section*.24}
 \contentsline {section}{\numberline {5.2}Perfect graphs}{25}{section.5.2}
-\contentsline {chapter}{\numberline {6}Random graphs}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}The notion of a random graph}{27}{section.6.1}
-\contentsline {subsubsection}{Theorem}{27}{section*.25}
-\contentsline {subsubsection}{Theorem (Erd\IeC {\"o}'s, 1956)}{28}{section*.26}
-\contentsline {subsubsection}{Lemma}{28}{section*.27}
-\contentsline {subsubsection}{Lemma}{28}{section*.28}
-\contentsline {subsubsection}{First moment method}{30}{section*.29}
-\contentsline {subsubsection}{Local lemma}{30}{section*.30}
-\contentsline {subsubsection}{Union bound}{30}{section*.31}
-\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (symmetric version)}{31}{section*.32}
-\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (asymmetric version)}{31}{section*.33}
-\contentsline {subsubsection}{Hypergraph 2-coloring}{31}{section*.34}
-\contentsline {subsubsection}{Theorem}{31}{section*.35}
-\contentsline {subsubsection}{Constructive proof}{32}{section*.36}
-\contentsline {subsubsection}{Analysis (not for exam)}{32}{section*.37}
+\contentsline {subsubsection}{Weak perfect graph conjecture}{26}{section*.25}
+\contentsline {subsubsection}{Strong perfect graph conjecture}{26}{section*.26}
+\contentsline {subsubsection}{Theorem (Lov\IeC {\'a}sz, 1972)}{26}{section*.27}
+\contentsline {chapter}{\numberline {6}Random graphs}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}The notion of a random graph}{29}{section.6.1}
+\contentsline {subsubsection}{Theorem}{29}{section*.28}
+\contentsline {subsubsection}{Theorem (Erd\IeC {\"o}'s, 1956)}{30}{section*.29}
+\contentsline {subsubsection}{Lemma}{30}{section*.30}
+\contentsline {section}{\numberline {6.2}The probabilistic method}{30}{section.6.2}
+\contentsline {subsubsection}{Lemma}{30}{section*.31}
+\contentsline {subsubsection}{Recap on Markov's inequality}{31}{section*.32}
+\contentsline {subsubsection}{First moment method}{32}{section*.33}
+\contentsline {subsubsection}{Local lemma}{32}{section*.34}
+\contentsline {subsubsection}{Union bound}{33}{section*.35}
+\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (symmetric version)}{33}{section*.36}
+\contentsline {subsubsection}{Lov\IeC {\'a}sz local lemma (asymmetric version)}{33}{section*.37}
+\contentsline {subsubsection}{Hypergraph 2-coloring}{33}{section*.38}
+\contentsline {subsubsection}{Theorem}{34}{section*.39}
+\contentsline {subsubsection}{Constructive proof}{34}{section*.40}
+\contentsline {subsubsection}{Analysis (not for exam)}{34}{section*.41}

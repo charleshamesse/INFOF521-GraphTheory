@@ -34,7 +34,7 @@ Quick remark on the number of edges in a bipartite graph: $K_{a,b}$, number of e
 \subsubsection{Theorem (Erdö's, 1956)}
 \textit{$\forall k \geq 0, \exists \mathcal{G}$ with girth$(G) > k$ and $\chi(G) > k$.\\}
 
-The idea is to use the Erdö's-Renyi model of random graphs $\mathcal{G}(n,p)$. There are $n$ vertices and for every vertex pair we put an edge at probability $p$, independently at random. 
+The idea is to use the Erdö's-Renyi model of random graphs $\mathcal{G}(n,p)$. There are $n$ vertices and for every vertex pair we put an edge at probability $p$, independently at random.
 
 \subsubsection{Lemma}
 \textit{For $G \in \mathcal{G}(n,p)$, let $X_k$ be the random variable counting the number of cycles of length $k$ in $G$. Then:}
@@ -44,25 +44,35 @@ The idea is to use the Erdö's-Renyi model of random graphs $\mathcal{G}(n,p)$. 
 
 Proof:
 \begin{enumerate}
-	\item The number of $k-cycles$ in $K_n$ is (considering that both orientations $/2$ and any shifting leads to the same cycle ($/k$)):
+	\item The number of $k-cycles$ in $K_n$ is (considering that both orientations ($/2$) and any shifting leads to the same cycle ($/k$)):
 	\begin{eqnarray}
 		{{n}\choose{k}} k! \cdot \frac{1}{2k} = \frac{n!}{2k(n-k)!}
 	\end{eqnarray}
-	\item For $C$ a $k$-cycle in $K_n$, we let $X_c$ be the independent random variable encoding whether $C \subset \mathcal{G}$. Then:
+	\item For $C$ a $k$-cycle in $K_n$, we let $X_c$ be the independent random variable encoding whether $C \subset \mathcal{G}$. Also, $E(X_C) = P[C \subseteq G] = p^k$. Then:
 	\begin{eqnarray}
 		E(X_k) = E(\sum_C X_C) = \sum_C E(X_C) = \sum_C p^k = \frac{n!}{2k(n-k)} p^k
 	\end{eqnarray}
 \end{enumerate}
 
-\subsubsection{Lemma}
-\textit{Let $n \geq k \geq 3$ and $p \in [0,1]$ with $p \geq 6k \ln n$. Then, for $G \in \mathcal{G}(n,p)$:}
+
+\section{The probabilistic method}
+
+An \textit{independent vertex set} of a graph $G$ is a subset of the vertices such that no two vertices in the subset represent an edge of $G$. \\
+
+The \textit{vertex independence number} of a graph, often called simply "the" independence number, is the cardinality of the largest independent vertex set, i.e., the size of a maximum independent vertex set. The independence number is most commonly denoted $\alpha(G)$:
 \begin{eqnarray}
-	P(\alpha(G)) \geq \frac{n}{2k} \rightarrow 0
+	\alpha(G) = \max(|U| : U \subset V \text{ independent})
 \end{eqnarray}
 
-First proof: let $t := \text{ceil}(n/2k)$. We have:
+\subsubsection{Lemma}
+\textit{Let $n \geq k \geq 3$ and $p \in [0,1]$ with $p \geq (6k \ln n)/n$. Then, for $G \in \mathcal{G}(n,p)$:}
 \begin{eqnarray}
-	P(\alpha(G) \geq t) &\overset{\text{union bound}}\leq& {{n}\choose{t}} (1 - p)^{t/2} \\
+	\lim_{n \rightarrow \infty} P[\alpha(G) \geq \frac{n}{2k}] = 0
+\end{eqnarray}
+
+First proof: let $t := \text{ceil}(n/2k)$. We have, using the fact that $1 - p \leq e^{-p}, \forall p \geq 0$:
+\begin{eqnarray}
+	P(\alpha(G) \geq t) &\overset{\text{union bound}}\leq& {{n}\choose{t}} (1 - p)^{{t}\choose{2}} \\
 	&\leq& n^t e^{-pt(t-1)/2} \\
 	&=& (ne^{-pt/2}e^{p/2})^t
 \end{eqnarray}
@@ -73,59 +83,59 @@ If that last expression goes towards zero, clearly it goes quicker to zero as $t
 \end{eqnarray}
 And $t \geq 1/2$. So:
 \begin{eqnarray}
-	(\underbrace{n^{-\frac{1}{2}}}_{\rightarrow 0}  \underbrace{e^{p/2}}_{\in [1,e]})t
+	(\underbrace{n^{-\frac{1}{2}}}_{\rightarrow 0}  \underbrace{e^{p/2}}_{\in [1,e]})^t
 \end{eqnarray}
 clearly goes to 0.\\
-Hence $P(\alpha(G) \geq n/2k \underset{n \rightarrow \infty}\rightarrow 0$.\\
+Hence $P[\alpha(G) \geq n/2k] \underset{n \rightarrow \infty}\rightarrow 0$.\\
 
 Proof of the theorem: we want to show $\exists G$ with girth$(G) > k$ and $\chi(G) > k$. Let $\varepsilon > 0$ be fixed with $\varepsilon < 1/k$. In the rest of the proof, we take $n$ "large enough" compared to $k$ and $\varepsilon$. Let $p := \frac{n^\varepsilon}{n}$.\\
 
 For $G \in \mathcal{G}(n,p)$, let $X_{\leq k}$ count the number of cycles of length $\leq k$. Then $X_{\leq k} = \sum_{i = 3}^k X_i$. Now:
 
 \begin{eqnarray}
-	E(X_{\leq k}) = \sum_{i=3}^k E(X_i) = \sum_{i=3}^k \frac{n!}{2i(n-i)! p^i} \leq \frac{1}{2} \sum_{i=3}^k n^i p^i \leq \frac{1}{2} (k-2)(np)^k
+	E(X_{\leq k}) = \sum_{i=3}^k E(X_i) = \sum_{i=3}^k \frac{n!}{2i(n-i)!} p^i \leq \frac{1}{2} \sum_{i=3}^k n^i p^i \leq \frac{1}{2} (k-2)(np)^k
 \end{eqnarray}
-For this that inequality, we take $n$ large enough to ensure $np = n^\varepsilon \geq 1$. Finally, we have:
+For this inequality, we take $n$ large enough to ensure $np = n^\varepsilon \geq 1$. Finally, we have:
 \begin{eqnarray}
 	\frac{1}{2} (k-2)(np)^k \leq \frac{k}{2} n^{\varepsilon k}
 \end{eqnarray}
-And $\varepsilon k < 1$.\\
+And $\varepsilon k < 1$, so that expression is sublinear in $n$.
 
 
-\textit{Quick recap on Markov's inequality}
+\subsubsection{Recap on Markov's inequality}
 If $X$ is a random variable with $X \geq 0$ and $a > 0$, then $P(x \geq a) \leq \frac{E(X)}{a}$. Proof (discrete case): say $X$ can take values in $\{v_1, v_2, \dotsb, v_n\}$ in increasing order and $v_1 \geq 0$. Then $E(X) = \sum_{i \geq 1} v_i P(x = v_i)$. But this cannot have any negative value: 
 \begin{eqnarray}
 	\sum_{i \geq 1} v_i P(x = v_i) &\geq& \sum_{i \geq 1, v_i \geq 0} v_i P(x = v_i) \\
 	&\geq&\sum_{i \geq 1, v_i \geq 0}  aP(x = v_i) \\
 	&=& a \sum_{i \geq 1, v_i \geq a} P(x = v_i)\\
-	&=& P(x \geq a) 
+	&=& a P(x \geq a) 
 \end{eqnarray} 	
-So $E(X) \geq a P(x \geq a)$.
+So $E(X) \geq a P(x \geq a)$.\\
 		
 		
 Back to the proof. By Markov's inequality:
 \begin{eqnarray}
-	P(X_{\leq k} \geq n/2) &\leq& \frac{E(X_{\leq}}{n/2} \\
+	P(X_{\leq k} \geq n/2) &\leq& \frac{E(X_{\leq k})}{n/2} \\
 	&\leq& k n^{\varepsilon k-1}
 \end{eqnarray}
-As $\varepsilon k-1 <0$, this whole last expression tends to 0. Also, since $p = \frac{n^\varepsilon}{n} \geq \frac{6k \ln n}{n}$, we can use previous lemma and get:
+As $\varepsilon k-1 <0$, this whole last expression tends to 0. Also, since $p = \frac{n^\varepsilon}{n} \geq \frac{6k \ln n}{n}$ because we choose $n$ large enough, we can use the previous lemma and get:
 \begin{eqnarray}
 	P(\alpha(G) \geq \frac{n}{2k}) \underset{n \rightarrow \infty}{\rightarrow} 0.
-\end{eqnarray}.
-Take $n$ large enough so that:
+\end{eqnarray}
+Now, take $n$ large enough so that:
 \begin{eqnarray}
 	P(X_{\leq k} \geq \frac{n}{2}) < 1/2, ~~~
-	P(\alpha(G) \geq \frac{n}{2k} < 1/2
+	P(\alpha(G) \geq \frac{n}{2k}) < 1/2
 \end{eqnarray}
 By the union bound:
 \begin{eqnarray}
 	P(X_{\leq k} \geq \frac{n}{2} || \alpha(G) \geq \frac{1}{2k}) < \frac{1}{2} + \frac{1}{2} < 1
 \end{eqnarray}
-So $\exists G$ with $<n/2$ cycles of length $\leq k$ and $\alpha(G) < \frac{n}{2k}$. For each cycle of length in $G$, choose a vertex on the cycle. Let $X$ be the set of chosen vertices and let $H := G - S$.\\
+So $\exists G$ with $<n/2$ cycles of length $\leq k$ and $\alpha(G) < \frac{n}{2k}$. For each cycle of length $\leq k$ in $G$, choose a vertex on the cycle. Let $S$ be the set of chosen vertices and let $H := G - S$.\\
 
 Then girth$(H) > k$. Also:
 \begin{eqnarray}
-	\chi(H) \geq \frac{|V(H)}{\alpha(H)} \geq \frac{|V(G)| - |S|}{\alpha(H)} \geq \frac{n/2}{\alpha(H)}
+	\chi(H) \geq \frac{|V(H)|}{\alpha(H)} \geq \frac{|V(G)| - |S|}{\alpha(H)} \geq \frac{n/2}{\alpha(H)}
 \end{eqnarray} 
 But we notice something about the stability number of $H$: it is at most the stability number of $G$. By dividing by $\alpha(G)$, we get another lower bound:
 \begin{eqnarray}
@@ -150,7 +160,7 @@ $A_1, ..., A_n$ events in a probability space "bad events"
 \end{eqnarray}
 So if $\sum_i P(A_i) < 1$, we have that $P(\bar{A_1}, ..., \bar{A_n}) > 0$. Note that this is usually a weak bound.\\
 
-$A_i$'s independent: if $P(A_i) < 1 \forall$: then $P(\cap \bar{A_i}) = \Pi_i P(\bar{A_i}) > 0$.
+$A_i$'s independent: if $P(A_i) < 1$ $\forall i$: then $P(\cap \bar{A_i}) = \prod_i P(\bar{A_i}) > 0$.
 
 With local dependencies: $A$ is independent from $B_1, ..., B_k$ if :
 \begin{eqnarray}
@@ -166,28 +176,40 @@ Remark: it is not enough to just check pairs. For $S = \{1,2,3,4,5,6\}$ and $A(1
 Say $A_1, ..., A_n$ are events. A dependency digraph on $A_1, ..., A_n$ is a digraph with vertex set $\{ 1, ..., n \}$ such that $A_i$ is independent from the collection $\{ A_j : j \neq i, (i,j) \notin E(D) \}$, $\forall i$.
 
 \subsubsection{Lovász local lemma (symmetric version)}
-Given events $A_1,...A_n$ and a dependency digraph with ?, outdegree $d$, if $P(A_i) \leq p \forall i$ and $eP(D+1) \leq 1$, then $P(\cap \bar{A_i}) > 0$.
+Given events $A_1,...A_n$ and a dependency digraph with max outdegree $d$, if $P(A_i) \leq p ~ \forall i$ and $ep(d+1) \leq 1$, then:
+\begin{eqnarray}
+	P(\cap \bar{A_i}) > 0
+\end{eqnarray}
 
 \subsubsection{Lovász local lemma (asymmetric version)}
 Given events $A_1,...A_n$ and a dependency digraph $D$.
-Suppose that $\exists x_1, ..., x_n \in [0,1]$ such that $P(A_i) \leq Pi_{(i,j) \in E(D)}( |- x_j) \forall i$. Then $P(\bigcap_i \bar{A_i}) \geq \Pi_i (1 - x_i) > 0$.
+Suppose that $\exists x_1, ..., x_n \in [0,1]$ such that $P(A_i) \leq \prod_{(i,j) \in E(D)}(1 - x_j) \forall i$. Then:
+\begin{eqnarray}
+	P(\bigcap_i \bar{A_i}) \geq \prod_i (1 - x_i) > 0
+\end{eqnarray}
 
 \subsubsection{Hypergraph 2-coloring}
-Note that a hypergraph is a set system. Hypergraph $H$ is $k-$uniform if each edge has size $k$.
+Note that a hypergraph is a set system. Hypergraph $H$ is $k-$uniform if each edge has size $k$.\\
 
 The \textit{2-coloring} of $H$ is a coloring of its vertices such that no edge is monochromatic.
 
 \subsubsection{Theorem} 
-\textit{If $A$ is a $k$-uniform hypergraph and each edge intersects $\leq 2^{k-1}/2$ others, then $\exists 2-$coloring of $H$.}
+\textit{If $A$ is a $k$-uniform hypergraph and each edge intersects $\leq 2^{k-1}/2$ others, then $\exists 2-$coloring of $H$.\\}
 
 Proof: \begin{itemize}
 	\item Color each vertex red (1/2) or blue (1/2) independently at random
 	\item Bad events: for each $e \in E(H) : A_e := $ "$e$ is monochromatic".
 	\item $P(A_e) = 2 \frac{1}{2^k} = 2^{-(k-1)}$
-	\item Dependency $d-$graph: put an edge $(e,f)$ whenever $e \cap f \neq \emptyset \forall e, f \in E(H)$
+	\item Dependency $d-$graph: put an edge $(e,f)$ whenever $e \cap f \neq \emptyset$, $\forall e, f \in E(H)$ (symmetric $d-graph$).
 \end{itemize}
 
-By the LLL: since $D$ has max outdegree $\leq \frac{2^{k-1}}{e} -1$ and $P(A_e) = 2^{-(k-1)} \forall e \in E(H)$ and $e 2^{-(k-1)} \left( \frac{2^{k-1}}{e} \right) \leq 1$, $P(\bigcap_{e \in E(H) \bar{A_e}} > 0$ and thus $\exists 2-coloring$.
+By the LLL: 
+	\begin{enumerate}
+		\item $D$ has max outdegree $\leq \frac{2^{k-1}}{e} -1$
+		\item $P(A_e) = 2^{-(k-1)} \forall e \in E(H)$
+		\item $2^{-(k-1)} \cdot e  \left( \frac{2^{k-1}}{e} \right) \leq 1$
+	\end{enumerate} 
+	Then $P(\bigcap_{e \in E(H) \bar{A_e}}) > 0$ and thus $\exists 2$-coloring.
 
 \subsubsection{Constructive proof}
 in case of 2-colorings of hypergraphs.
