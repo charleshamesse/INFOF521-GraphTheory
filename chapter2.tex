@@ -1,19 +1,20 @@
 
 \chapter{Matchings}
-Given the graph $G = (V, E)$, the set $M \subseteq E$ is a matching if all edges in $M$ are independent. That is, no two edges share an endpoint. The size of a matching is the number of edges it contains.\\
+Given the graph $G = (V, E)$, the set $M \subseteq E$ is a \textit{matching} if all edges in $M$ are independent. That is, no two edges share an endpoint. The size of a matching is the number of edges it contains.\\
 
 For the graph $G$, $X \subseteq V$ is a \textit{vertex cover} if every edge in $E$ has at least one endpoint in $X$.\\
 
-A \textit{perfect matching} (a.k.a. 1-factor) is a matching which matches all vertices of the graph. That is, every vertex of the graph is incident to exactly one edge of the matching. Every perfect matching is maximum and hence maximal. In some literature, the term complete matching is used. A perfect matching is also a minimum-size edge cover. \\
+A \textit{perfect matching} (a.k.a. 1-factor) is a matching with $|M| = \frac{|V|}{2}$.
+That is, every vertex of the graph is incident to exactly one edge of the matching. Every perfect matching is maximum and hence maximal. In some literature, the term complete matching is used. A perfect matching is also a minimum-size edge cover. \\
 
 Observation: if $M$ is a matching and $X$ a vertex cover, then $|X| \geq |M|$. Corollary: the minimum size of a vertex cover is $\geq$ the maximum size of a matching.
 
 \section{Matching in bipartite graphs}
-For this whole section, we let $G = (V, E)$ be a fixed bipartite graph with bipartition $\{A, B \}$. Vertices denoted as $a, a'$, etc will be assumed to lie in $A$, vertices noted as $b$ etc will lie in $B$.\\
+For this whole section, we let $G = (V, E)$ be a fixed bipartite graph with bipartition $\{A, B \}$. Vertices denoted as $a, a'$, etc. will be assumed to lie in $A$, vertices noted as $b$ etc. will lie in $B$.\\
 
 An \textit{alternating path} (w.r.t. some matching $M$) is a path in $G$ that starts at an unmatched vertex in $A$ and alternates between edges in $E-M$ and edges in $M$ (it can be made of only one edge).\\
 
-An \textit{augmenting path} (w.r.t. some matching $M$) is an alternating path whose end will be at an unmatched vertex. Note that if $P$ is an augmenting path, then $M \Delta E(P)$ \footnote{$\Delta$, a symmetric difference, defined as $X \Delta Y = (X-Y) \cup (Y-X)$} is again a matching, of size $|M| + 1$. \\
+An \textit{augmenting path} (w.r.t. some matching $M$) is an alternating path whose end will be at an unmatched vertex (of $B$). Note that if $P$ is an augmenting path, then $M \Delta E(P)$ \footnote{$\Delta$, a symmetric difference, defined as $X \Delta Y = (X-Y) \cup (Y-X) = (X \cup Y) - (X \cap Y)$} is again a matching, of size $|M| + 1$. \\
 
 Alternating paths play an important role in the practical search for large matchings. In fact, if we start with any matching and keep applying augmenting paths until no further such improvement is possible, the matching obtained will always be an optimal one, a matching with the largest possible number of edges.
 
@@ -33,13 +34,13 @@ Let $G = (V,E)$ be a bipartite graph with bipartition $V = (A, B)$. Then the max
 	
 \subsubsection{Hall's theorem (1935)} 
 
-\textit{If $G$ is bipartite with partitions $A,B$, it contains a matching of $A$ if and only if $|N(S) \geq |S|$ for all $S \subseteq A$).}\\
+\textit{If $G$ is bipartite with partitions $A,B$, it contains a matching of $A$ if and only if $|N(S) \geq |S|$ for all $S \subseteq A$ (marriage condition).}\\
 
 Here, $N(S) = \{ x \in B $ s.t. $x$ is adjacent to some vertex in $S \}$.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\center
-	\includegraphics[width=0.3\linewidth]{img/2-1.png}
+	\includegraphics{img/2-1.png}
 \end{figure}  
 Let $G = (V, E)$ be a bipartite graph with bipartition $V = (A, B)$. Then (keeping in mind that for each partition $X$, any $x \in X$ isn't connected to any other $x' \in X$):
 \begin{eqnarray}
@@ -71,17 +72,32 @@ Proving both implications:
 		and the marriage condition fails.
 \end{enumerate}
 
-	\section{Matching in general graphs}
-		Given a graph $G$, let us denote by $\mathcal{C}_G$ the set of its components, and by $q(G)$ the number of its odd components, those of odd order.\\
-		
-		A \textit{spanning subgraph} $H$ of a graph $G$ is a graph that includes all of the vertices of $G$. 
+\bigskip
+$\mu(G) := \mu := |\text{max matching}|$\\
+$\tau(G) := \tau := |\text{min vertex cover}|$
+
+$G$ bipartite $\Rightarrow \mu(G) = \tau(G)$\\
+In general $\Rightarrow \mu(G) \leq \tau(G) \leq 2 \mu(G)$
+
+\section{Matching in general graphs}
+\textit{Component} (or \textit{connected component}) is a connected subgraph which is inclusion wise
+maximal with this property.
+
+Observation: every component of $G$ is an induced subgraph of $G$.
+
+\bigskip
+Given a graph $G$, let us denote by $\mathcal{C}_G$ the set of its components, and by $q(G)$ the number of its odd components, those of odd order.
 
 
 		\subsubsection{Tutte's theorem (1947)} 
 		
-		\textit{A graph $G$ has a 1-factor if and only if $q(G - S) \leq |S|$ for all $S \subseteq V(G)$.}\\
-		
-		Note that a 1-factor corresponds to a perfect matching. Obviously, every odd component of $G - S$ is linked to $S$ by at least one edge from the matching $M$ (because of parity). Hence $|S| \geq q(G - S)$. Let's prove the contrapositive: assume there isn't a perfect matching. We want to show:
+		\textit{A graph $G$ has a perfect matching if and only if $q(G - S) \leq |S|$ for all $S \subseteq V(G)$.}\\
+
+                $\Rightarrow$)
+                Obviously, every odd component of $G - S$ is linked to $S$ by at least one edge from the matching $M$ (because of parity). Hence $|S| \geq q(G - S)$.
+
+                $\Leftarrow$)
+                Let's prove the contrapositive: assume there isn't a perfect matching. We want to show:
 			\begin{eqnarray}
 				\exists S \subseteq V : |S| < q(G - S)
 			\end{eqnarray} 
@@ -101,24 +117,24 @@ Proving both implications:
 		
 		\paragraph{Trick} Let $H$ be obtained from $G$ by iteratively adding edges as long as possible, without creating any perfect matching. By previous observation, if we find a bad set $S$ for $H$ then $S$ is also bad for $G$. Hence, we may focus on $H$.
 		
-		Say that $S \subseteq V$ is nice. That is, if:
+		Say that $S \subseteq V$ is "nice". That is, if:
 		\begin{enumerate}
 			\item Every $v \in S$ is connected to all other vertices from $V - \{ v \}$.
 			\item All components of $H - S$ are complete subgraphs
 		\end{enumerate}
 		Observation: if $S \subseteq V$ is nice, then $S$ is bad. In every component, let's cover all but one vertex. For every odd component, connect the vertex we left to $S$. Indeed, if $S$ were not bad, then we could construct a perfect matching in $H$. But we know there isn't a perfect matching so $S$ is bad.\\
 		
-		So WMA there isn't a nice $S \subseteq V$. We will show that it leads to a contradiction. Let $S := \{ v \in V : v \text{adjacent to all vertices in} V - \{ v \} \}$. $S$ is the set of universal vertices (satisfies condition 1). By definition, $S$ satisfies condition 1 from the definition of nice subsets. Thus $S$ must violate condition 2. That is, there is a component $X$ of $G - S$ which is not complete, i.e. $\exists a, a' \in X$ such that $aa' \notin E$. Consider a shortest path between $a$ and $a'$, and let $a, b, c$ be the first three vertices on that path. Since $b \notin S$, $\exists d \in V$ such that $bd \notin E$. There is a perfect matching $M_1$ in $H + ac$, also there's a perfect matching in $M_2$ in $H + bd$ 
+		So WMA there isn't a nice $S \subseteq V$. We will show that it leads to a contradiction. Let $S := \{ v \in V : v \text{ adjacent to all vertices in } V - \{ v \} \}$. $S$ is the set of universal vertices (satisfies condition 1). By definition, $S$ satisfies condition 1 from the definition of nice subsets. Thus $S$ must violate condition 2. That is, there is a component $X$ of $G - S$ which is not complete, i.e. $\exists a, a' \in X$ such that $aa' \notin E$. Consider a shortest path between $a$ and $a'$, and let $a, b, c$ be the first three vertices on that path. Since $b \notin S$, $\exists d \in V$ such that $bd \notin E$. There is a perfect matching $M_1$ in $H + ac$, also there's a perfect matching in $M_2$ in $H + bd$ 
 		
 		Note: we know there are at least 3 vertices in this component to have a least 1 connection: components are connected.
 
-		\subsubsection{Tutte's proof 2}
-			Let $H + ac$ have a perfect matching $M_1$ and $H + bd $ have a perfect matching $M_2$.
+\bigskip
+Let $H + ac$ have a perfect matching $M_1$ and $H + bd $ have a perfect matching $M_2$.
 			With:
 			\begin{eqnarray}
 				M_1 \Delta M_2 = (M_1 - M_2) \cup (M_2 - M_1)
 			\end{eqnarray}
-			We get an "alternating" path of pink / blue edges (which are in the symmetric difference), paths alternating between colours, which goes back to the starting point (i.e. a cycle) because the graph is finite and botch matchings are perfect. Also, there could be as many cycles as we want. \\
+			We get an "alternating" path of pink / blue edges (which are in the symmetric difference), paths alternating between colours, which goes back to the starting point (i.e. a cycle) because the graph is finite and both matchings are perfect. Also, there could be as many cycles as we want. \\
 			
 			Now, using this result: remember that $ac$ is an edge of $M_1$, as $bd$ is in $M_2$, not in the other:
 			\begin{eqnarray}
