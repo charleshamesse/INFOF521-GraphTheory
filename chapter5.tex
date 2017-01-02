@@ -1,7 +1,10 @@
 
 \chapter{Colouring}
-A vertex colouring of a graph $G = (V,E)$ is a map $\phi: V \rightarrow S$ such that $\phi(u) \neq \phi(v) ~~\forall uv \in E(G)$.\\
+A vertex colouring of a graph $G = (V,E)$ is a map $\phi: V \rightarrow S$ such that $\phi(u) \neq \phi(v) ~~\forall uv \in E(G)$.
 
+$S$, set of colours. Implicitly $\subset \mathbb{N}$.
+
+\bigskip
 If $\phi$ is a $k-$coloring, $|S| \leq k$. Also, we define the \textit{chromatic number} $\chi$ as:
 \begin{eqnarray}
 	\chi (G) := \min \{ k : \exists k-\text{colouring of }G \}
@@ -31,7 +34,7 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 					d(G) = \frac{\sum_{v \in V(G)} d(v)}{|V(G)|} = \frac{2 |E(G)|}{|V(G)|} \leq \frac{2 (3|V(G)| - 6)}{|V(G)|} < 6
 				\end{eqnarray}
 				Now if this average is strictly less than 6, there is at least one vertex $v$ with $d(v) \leq 5$.
-			\item If $d(v) = 4$, then consider a 5-colouring of $G-v$, one colour is available at $v$, done.
+			\item If $d(v) \leq 4$, then consider a 5-colouring of $G-v$, one colour is available at $v$, done.
 			\item If $d(v) = 5$, showing that $\chi_{G}$ could be 6 is now quite straightforward, think of removing $v$ and then putting it back in $G$). Now we have a potential problem if we consider a 5-colouring: there must be two distinct non-adjacent vertices $x, y$ in the neighbours of $v$ such that $xy \notin E(G)$. We will first contract $xv$ and $yv$ (thus keeping the planar property, so we can apply induction). By induction, $G / \{ vx, vy \}$ has a 5-colouring $\phi'$. Let:
 				\begin{eqnarray}
 					\phi(w) &:=& \phi'(w) ~\forall w\ \in V(G) - \{ vx, vy \}\\
@@ -42,7 +45,7 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 		
 		
 		\subsection{Discharging method (Weinicke, 1904)}
-		\textit{One example to prove above's theorem. If $G$ is a plane triangulation and $G$ has minimum degree, then $\exists vw \in E(G)$ such that $d(v) = 5$ and $d(w) \in \{ 5, 6 \}$.\\}
+		\textit{One example to prove above's theorem. If $G$ is a plane triangulation and $G$ has minimum degree $5$, then $\exists vw \in E(G)$ such that $d(v) = 5$ and $d(w) \in \{ 5, 6 \}$.\\}
 		
 		Put a charge of 6-$d(v)$ on each $v \ in (G)$ with:
 		\begin{eqnarray}
@@ -66,8 +69,8 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 					\text{charge'}(v) &\leq&  \text{charge}(v) + d(v)/5\\
 					&=& 6 - d(v) + d(v)/5\\
 					&=& 6 - \frac{4}{5}d(v)\\
-					&\leq& 6 - \frac{4 \cdot 8}{5} \leq 0 
-				\end{eqnarray}   
+					&\leq& 6 - \frac{4 \cdot 8}{5} < 0
+				\end{eqnarray}
 			\item $d(v) = 7$. By the same calculation, $v$ receives charges from at least 6 from its neighbours. With the condition that the new charge must be strictly positive, we can find two neighbours of $v$ that have degree 5 and are adjacent.
 		\end{enumerate}
 		
@@ -81,7 +84,7 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 	
 	The \textit{girth} of a graph $G$ is the length of a shortest cycle contained in $G$. Its value is considered infinite if $G$ has no cycle.
 	
-		\subsection{Theorem (Erdo's, 1950)}
+		\subsection{Theorem (Erdős, 1950)}
 		\begin{eqnarray}
 			\forall k \geq 1, \exists G : \chi(G) \geq k \wedge \text{girth}(G) \geq k
 		\end{eqnarray}
@@ -95,3 +98,20 @@ Note that $k-$colouring is nothing but a vertex parition into $k$ independent se
 	\section{Perfect graphs}
 		A graph $G$ is \textit{perfect} if $\chi(H) = w(H)$ for all induced subgraphs $H$ of $G$. For example, bipartite graphs are perfect.
 
+
+\subsection{Weak perfect graph conjecture}
+$G$ perfect $\iff \overline{G}$ perfect
+
+\subsection{Strong perfect graph conjecture}
+$G$ perfect\\
+$\iff$ neither $G$ nor $\overline{G}$ contain odd cycle of length at least $5$
+as an induced subgraph
+
+\subsection{Theorem of Lovász, 1992}
+$G$ perfect
+$\iff \alpha(H)\,\omega(H) \geq |H|
+\qquad\forall$ induced subgraph $H$ of $G$
+
+\bigskip
+\textit{Stability number}
+$\alpha(G) :=$ max size of a stable set (independant set).
