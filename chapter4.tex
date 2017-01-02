@@ -14,7 +14,7 @@
 		
 		All acyclic plane graphs will have only an outer face. As soon as there is a cycle, there will be at least one inner face. In other words: a plane graph has only one face (the outer face) $\iff$ it is a forest. 
 		
-		\subsubsection{Lemma 1} 
+		\subsection{Lemma 1} 
 		\textit{Let $F \in E(G)$. Then:}
 		\begin{enumerate}
 			\item $\partial F \subseteq G$
@@ -24,7 +24,7 @@
 		\end{enumerate}
 		
 		
-		\subsubsection{Lemma 2}
+		\subsection{Lemma 2}
 		\textit{If $G$ is a 2-connected plane graph, then the boundary of every face is a cycle of $G$.\\}
 		
 		Some other properties:
@@ -35,11 +35,11 @@
 		\end{itemize}
 		
 		
-		\subsubsection{Lemma 3}
+		\subsection{Lemma 3}
 		\textit{A plane graph on at least 3 vertices is maximally plane $\iff$ it is a plane triangulation}
 		
 		
-		\subsubsection{Theorem 1: Euler's formula}
+		\subsection{Theorem 1: Euler's formula}
 		\textit{Let $G$ be a connected plane graph with $n$ vertices, $m$ edges and $f$ faces. Then:}
 		\begin{eqnarray}
 			n - m + f = 2
@@ -52,7 +52,7 @@
 			\item Inductive step: $m \geq n$. The connected graph is not a tree, then it has a cycle. Consider a cycle of $G$ and let $e \in E(C)$. The edge is on the cycle, so it's on the boundary of exactly two distinct faces of the graph $F_1, F_2 \in F(G)$. If we remove this edge from the graph, the graph stays connected but two faces merge so $f$ decreases by 1. So $f \rightarrow f -1$, $m \rightarrow m - 1$ and $n$ remains the same. Then $-m + f$ is constant and $n -m + f = 2$.
 		\end{enumerate}
 		
-		\subsubsection{Corollary 1} 
+		\subsection{Corollary 1} 
 		\textit{If $G$ is an $n$-vertex plane graph with $n$ being at least $3$, then $G$ has at most $3n - 6$ edges.\\}
 		
 		With my assumption WLOG that $G$ is maximally plane, i.e. $G$ is a plane triangulation. Let $m := |E(G)|$ and $f := |F(G)|$.
@@ -74,24 +74,24 @@
 			\implies m &=& 3n - 6
 		\end{eqnarray}
 		
-		\subsubsection{Corollary 2}
+		\subsection{Corollary 2}
 		\textit{$K_5$ is not planar.\\}
 		
 		$K_5$ has $n = 5$ vertices and $m = 10$ edges but $3n - 6 = 9 < 10$.
 		
 		
-		\subsubsection{Lemma 3}
+		\subsection{Lemma 3}
 		\textit{If $G$ is an $n$-vertex plane graph ($n \geq 3)$ and has no triangle (i.e cycle of length 3 or 3 vertices that are pairwise adjacent), then $G$ has at most $2n - 4$ edges.\\}
 		
-		\subsubsection{Corollary 3}
+		\subsection{Corollary 3}
 		\textit{$K_{3,3}$ is not planar.\\}
 		
 		$K_{3,3}$ has $n = 6$ vertices and $m = 9$ edges: $2n - 4 = 8 < 9$.
 		
-		\subsubsection{Corollary 4}
+		\subsection{Corollary 4}
 		\textit{No planar graph contains $K_5$ or $K_{3,3}$ as a minor.}
 		
-		\subsubsection{Theorem 2: Kuratowski (1930)}
+		\subsection{Theorem 2: Kuratowski (1930)}
 		\textit{A graph $G$ is planar $\iff$ $G$ it has neither $K_5$ nor $K_{3,3}$ as minor.\\}
 		
 		\begin{enumerate}

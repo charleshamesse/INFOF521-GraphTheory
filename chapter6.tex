@@ -3,7 +3,7 @@
 
 \section{The notion of a random graph}
 Let $V$ be a fixed set of $n$ elements, say $V = \{0, \dotsb, n-1\}$
-\subsubsection{Theorem}
+\subsection{Theorem}
 \textit{Every graph $G$ has a bipartite subgraph $H$ with $|E(H)| \geq |E(G)|/2$.\\}
 
 Let $H$ be a bipartite subgraph of $G$ with bipartition $A,B$ defined as follows:
@@ -31,12 +31,12 @@ Then in particular, $\exists H$ with $|E(H)| \geq |E(G)|/2$.\\
 
 Quick remark on the number of edges in a bipartite graph: $K_{a,b}$, number of edges $ab$, maximal when $a = b = n/2$, then $K_{n/2, n/2}$ has $n^2/4$ edges.
 
-\subsubsection{Theorem (Erdö's, 1956)}
+\subsection{Theorem (Erdö's, 1956)}
 \textit{$\forall k \geq 0, \exists \mathcal{G}$ with girth$(G) > k$ and $\chi(G) > k$.\\}
 
 The idea is to use the Erdö's-Renyi model of random graphs $\mathcal{G}(n,p)$. There are $n$ vertices and for every vertex pair we put an edge at probability $p$, independently at random. 
 
-\subsubsection{Lemma}
+\subsection{Lemma}
 \textit{For $G \in \mathcal{G}(n,p)$, let $X_k$ be the random variable counting the number of cycles of length $k$ in $G$. Then:}
 \begin{eqnarray}
 	E(X_k) = \frac{n!}{2k(n-k)} p^k
@@ -54,7 +54,7 @@ Proof:
 	\end{eqnarray}
 \end{enumerate}
 
-\subsubsection{Lemma}
+\subsection{Lemma}
 \textit{Let $n \geq k \geq 3$ and $p \in [0,1]$ with $p \geq 6k \ln n$. Then, for $G \in \mathcal{G}(n,p)$:}
 \begin{eqnarray}
 	P(\alpha(G)) \geq \frac{n}{2k} \rightarrow 0
@@ -135,16 +135,16 @@ But we notice something about the stability number of $H$: it is at most the sta
 \end{eqnarray}
 So the chromatic number of $H$ is strictly more than $k$, and so is its girth.
 
-\subsubsection{First moment method} 
+\subsection{First moment method} 
 \begin{itemize}
 	\item Markov's inequality to bind to probability of a RV non negative, smaller than its expectation divided by some constant
 	\item Union bound	
 \end{itemize}
 
 
-\subsubsection{Local lemma}
+\subsection{Local lemma}
 $A_1, ..., A_n$ events in a probability space "bad events"
-\subsubsection{Union bound}
+\subsection{Union bound}
 \begin{eqnarray}
 	P(A \cup ... \cup A_n) \leq \sum_i P(A_i)
 \end{eqnarray}
@@ -165,19 +165,19 @@ Remark: it is not enough to just check pairs. For $S = \{1,2,3,4,5,6\}$ and $A(1
 
 Say $A_1, ..., A_n$ are events. A dependency digraph on $A_1, ..., A_n$ is a digraph with vertex set $\{ 1, ..., n \}$ such that $A_i$ is independent from the collection $\{ A_j : j \neq i, (i,j) \notin E(D) \}$, $\forall i$.
 
-\subsubsection{Lovász local lemma (symmetric version)}
+\subsection{Lovász local lemma (symmetric version)}
 Given events $A_1,...A_n$ and a dependency digraph with ?, outdegree $d$, if $P(A_i) \leq p \forall i$ and $eP(D+1) \leq 1$, then $P(\cap \bar{A_i}) > 0$.
 
-\subsubsection{Lovász local lemma (asymmetric version)}
+\subsection{Lovász local lemma (asymmetric version)}
 Given events $A_1,...A_n$ and a dependency digraph $D$.
 Suppose that $\exists x_1, ..., x_n \in [0,1]$ such that $P(A_i) \leq Pi_{(i,j) \in E(D)}( |- x_j) \forall i$. Then $P(\bigcap_i \bar{A_i}) \geq \Pi_i (1 - x_i) > 0$.
 
-\subsubsection{Hypergraph 2-coloring}
+\subsection{Hypergraph 2-coloring}
 Note that a hypergraph is a set system. Hypergraph $H$ is $k-$uniform if each edge has size $k$.
 
 The \textit{2-coloring} of $H$ is a coloring of its vertices such that no edge is monochromatic.
 
-\subsubsection{Theorem} 
+\subsection{Theorem} 
 \textit{If $A$ is a $k$-uniform hypergraph and each edge intersects $\leq 2^{k-1}/2$ others, then $\exists 2-$coloring of $H$.}
 
 Proof: \begin{itemize}
@@ -189,7 +189,7 @@ Proof: \begin{itemize}
 
 By the LLL: since $D$ has max outdegree $\leq \frac{2^{k-1}}{e} -1$ and $P(A_e) = 2^{-(k-1)} \forall e \in E(H)$ and $e 2^{-(k-1)} \left( \frac{2^{k-1}}{e} \right) \leq 1$, $P(\bigcap_{e \in E(H) \bar{A_e}} > 0$ and thus $\exists 2-coloring$.
 
-\subsubsection{Constructive proof}
+\subsection{Constructive proof}
 in case of 2-colorings of hypergraphs.
 
 Moser 08-09:
@@ -205,6 +205,6 @@ fix$(e)$ is defined as:
 \end{itemize}
 
 
-\subsubsection{Analysis (not for exam)}
+\subsection{Analysis (not for exam)}
 Consider a call of fix$(e)$ (ie this edge was not chromatic). We get a recursive tree.
 
