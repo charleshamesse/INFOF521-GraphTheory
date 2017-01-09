@@ -1,0 +1,128 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{parskip}
+\usepackage{eurosym}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\setlength{\parskip}{2pt}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\title{INFO-F521 - Graph Theory - List of Theorems, Lemmas, Corollaries and Observations}
+\date{\vspace{-7ex}}
+\begin{document}
+
+
+\maketitle
+%%%%%%%%%%%%%%%%
+% Main content
+%%%%%%%%%%%%%%%%
+
+\section{Matchings}
+\paragraph{Theorem 1 (König's, 1931)} 
+\textit{The maximum cardinality of a matching in $G$ is equal to the minimum cardinality of a vertex cover.}
+
+\paragraph{Corollary 1} \textit{The minimum size of a vertex cover is $\geq$ the maximum size of a matching.}
+
+\paragraph{Theorem 2 (Hall, 1935)} 
+\textit{If $G$ is bipartite with partitions $A,B$, it contains a matching of $A$ if and only if $|N(S) \geq |S|$ for all $S \subseteq A$).}
+
+\paragraph{Theorem 3 (Tutte, 1947)} 
+		\textit{A graph $G$ has a 1-factor if and only if $q(G - S) \leq |S|$ for all $S \subseteq V(G)$.}
+
+\paragraph{Observation 1} \textit{If $H$ is a graph and $H'$ is a subgraph obtained by deleting some edge $e$ of $H$, then $q(H') \geq q(H)$.}
+\paragraph{Corollary 2} \textit{If $H'$ is a spanning subgraph of $H$ then  $q(H') \geq q(H)$.}
+		
+\paragraph{Corollary 3} \textit{If $S$ is a bad set for $H$ then $S$ is bad for all spanning subgraphs of $H$.}
+
+\section{Connectivity}
+\paragraph{Theorem 1 (ear decomposition of 2-connected graphs)}
+\textit{Let $G$ be 2-connected $\iff G$ can be built starting with a cycle and iteratively adding ears.}
+
+\paragraph{Theorem 2 (Tutte)} 
+		\textit{If $G$ is 3-connected and $|V(G)| \geq 5$, then $\exists e \in E (G)$ such that $G / e$ is still 3-connected.}
+
+\paragraph{Theorem 3 (Menger)}
+		\textit{Let $G = (V,E)$ be a graph and $A, B \subseteq V$. Then the minimum number of vertices separating $A$ from $B$ in $G$ is equal to the maximum number of disjoint $A-B$ paths in $G$.}
+		
+\paragraph{Theorem 4 (Menger, global version)} \textit{A graph $G$ is $k$-connected $\iff$ every pair $a,b$ of distinct vertices are linked by $k$ independent paths (no internal vertex in common, they only meet at endpoints).}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Planar Graphs}
+
+\paragraph{Lemma 1}
+\textit{Let $F \in E(G)$. Then:}
+		\begin{enumerate}
+			\item $\partial F \subseteq G$
+			\item \textit{$\forall e \in E(G)$, either $e \in \partial F$, or $\partial F \cap \text{int}(e) = \emptyset$}
+			\item \textit{If $e \in E(G)$ is on a cycle $C \in G$, then $e$ is contained in the boundary of exactly two faces of $G$, one inside $C$ and the other outside $C$.}
+			\item \textit{If $e \in E(G)$ is not included in any cycle, then $e$ appears in the boundary of exactly one face.}
+		\end{enumerate}
+		
+\paragraph{Lemma 2}
+\textit{If $G$ is a 2-connected plane graph, then the boundary of every face is a cycle of $G$.}
+
+\paragraph{Lemma 3}
+		\textit{A plane graph on at least 3 vertices is maximally plane $\iff$ it is a plane triangulation}
+		
+\paragraph{Theorem 1 (Euler)}
+		\textit{For $G$, a connected plane graph with $n$ vertices, $m$ edges and $f$ faces: $n - m + f = 2$.}
+		
+\paragraph{Corollary 1} 
+\textit{If $G$ is an $n$-vertex plane graph with $n$ being at least $3$, then $G$ has at most $3n - 6$ edges.}
+
+\paragraph{Corollary 2}
+\textit{$K_5$ is not planar.}
+
+		
+\paragraph{Lemma 4}
+\textit{If $G$ is an $n$-vertex plane graph ($n \geq 3)$ and has no triangle (i.e cycle of length 3 or 3 vertices that are pairwise adjacent), then $G$ has at most $2n - 4$ edges.}
+
+\paragraph{Corollary 3}
+		\textit{$K_{3,3}$ is not planar.}
+		
+\paragraph{Corollary 4}
+		\textit{No planar graph contains $K_5$ or $K_{3,3}$ as a minor.}
+\paragraph{Theorem 2 (Kuratowski, 1930)}
+		\textit{A graph $G$ is planar $\iff$ $G$ it has neither $K_5$ nor $K_{3,3}$ as minor.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Coloring}
+\paragraph{Theorem 1 (Kempe and Heawood, 1890)}
+		\textit{If $G$ is planar, $\chi_{G} \leq 5$.}
+
+\paragraph{Theorem 2 (Erdö, 1950)} \textit{For all $k \geq 1$, there exists a graph $G$ such that $\chi(G) \geq k $ and $\text{girth}(G) \geq k$}
+
+\paragraph{Theorem 3 (Lovász, 1972)}
+	\textit{$G$ is perfect $\iff \alpha(H) \omega(H) \geq |V(H)| ~ \forall$ induced subgraphs $H$ of $G$.}
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Random graphs}
+\paragraph{Theorem 1}
+\textit{Every graph $G$ has a bipartite subgraph $H$ with $|E(H)| \geq |E(G)|/2$.}
+
+
+\paragraph{Theorem 2 (Erdö, 1956)}
+\textit{$\forall k \geq 0, \exists \mathcal{G}$ with girth$(G) > k$ and $\chi(G) > k$.}
+
+\paragraph{Lemma 1}
+\textit{For $G \in \mathcal{G}(n,p)$, let $X_k$ be the random variable counting the number of cycles of length $k$ in $G$. Then: $E(X_k) = \frac{n!}{2k(n-k)} p^k$}
+
+\paragraph{Lemma 2}
+\textit{Let $n \geq k \geq 3$ and $p \in [0,1]$ with $p \geq (6k \ln n)/n$. Then, for $G \in \mathcal{G}(n,p)$: $\lim_{n \rightarrow \infty} P[\alpha(G) \geq \frac{n}{2k}] = 0$}
+
+
+\paragraph{Lemma 3 (Lovász, local lemma symmetric version)}
+\textit{Given events $A_1,...A_n$ and a dependency digraph with max outdegree $d$, if $P(A_i) \leq p ~ \forall i$ and $ep(d+1) \leq 1$, then: $
+	P(\cap \bar{A_i}) > 0$}
+
+\paragraph{Lemma 4 (Lovász, local lemma asymmetric version)}
+\textit{Given events $A_1,...A_n$ and a dependency digraph $D$. Suppose that $\exists x_1, ..., x_n \in [0,1]$ such that $P(A_i) \leq \prod_{(i,j) \in E(D)}(1 - x_j) \forall i$. Then $P(\bigcap_i \bar{A_i}) \geq \prod_i (1 - x_i) > 0$.}
+
+\paragraph{Theorem 3} 
+\textit{If $A$ is a $k$-uniform hypergraph and each edge intersects $\leq 2^{k-1}/2$ others, then $\exists 2-$coloring of $H$.}
+\end{document}
+

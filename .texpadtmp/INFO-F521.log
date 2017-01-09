@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  29 DEC 2016 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  7 JAN 2017 20:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -878,12 +878,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 120--122
 
  []
 
-[10]) [11]
+) [11]
 \openout2 = `chapter3.aux'.
 
  (./chapter3.tex [12
@@ -938,23 +938,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+[13] <img/3-1.png, id=218, 436.63126pt x 159.59625pt>
+File: img/3-1.png Graphic file (type png)
+ <use img/3-1.png>
+Package pdftex.def Info: img/3-1.png used on input line 33.
+(pdftex.def)             Requested size: 436.63019pt x 159.59584pt.
+
+Overfull \hbox (27.19536pt too wide) in paragraph at lines 33--34
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+[14 <./img/3-1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 67--70
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
 
  []
 
@@ -1020,17 +1030,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-<img/4-1.png, id=269, 369.38pt x 244.915pt>
+<img/4-1.png, id=271, 369.38pt x 244.915pt>
 File: img/4-1.png Graphic file (type png)
  <use img/4-1.png>
 Package pdftex.def Info: img/4-1.png used on input line 105.
 (pdftex.def)             Requested size: 122.8317pt x 81.44255pt.
- [19] <img/4-2.png, id=286, 427.5975pt x 280.04625pt>
+ [19] <img/4-2.png, id=288, 427.5975pt x 280.04625pt>
 File: img/4-2.png Graphic file (type png)
  <use img/4-2.png>
 Package pdftex.def Info: img/4-2.png used on input line 116.
 (pdftex.def)             Requested size: 122.8317pt x 80.44643pt.
- <img/4-3.png, id=287, 123.46124pt x 80.3pt>
+ <img/4-3.png, id=289, 123.46124pt x 80.3pt>
 File: img/4-3.png Graphic file (type png)
  <use img/4-3.png>
 Package pdftex.def Info: img/4-3.png used on input line 128.
@@ -1039,7 +1049,7 @@ Package pdftex.def Info: img/4-3.png used on input line 128.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/4-4.png, id=288, 147.55125pt x 136.51pt>
+<img/4-4.png, id=290, 147.55125pt x 136.51pt>
 File: img/4-4.png Graphic file (type png)
  <use img/4-4.png>
 Package pdftex.def Info: img/4-4.png used on input line 140.
@@ -1289,18 +1299,18 @@ Package rerunfilecheck Info: File `INFO-F521.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 7434 strings out of 494448
- 107247 string characters out of 6166789
+ 7439 strings out of 494448
+ 107317 string characters out of 6166789
  193484 words of memory out of 5000000
- 10378 multiletter control sequences out of 15000+600000
+ 10382 multiletter control sequences out of 15000+600000
  85502 words of font info for 66 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  29i,14n,30p,786b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.pdf (34 pages, 697427 bytes).
+Output written on /Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.pdf (34 pages, 756604 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
+ 556 PDF objects out of 1000 (max. 8388607)
  483 compressed objects within 5 object streams
  206 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

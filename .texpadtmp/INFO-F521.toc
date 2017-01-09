@@ -9,17 +9,17 @@
 \contentsline {subsubsection}{K\IeC {\"o}nig's theorem (1931)}{8}{section*.2}
 \contentsline {subsubsection}{Hall's theorem (1935)}{8}{section*.3}
 \contentsline {section}{\numberline {2.2}Matching in general graphs}{9}{section.2.2}
-\contentsline {subsubsection}{Tutte's theorem (1947)}{9}{section*.4}
+\contentsline {subsubsection}{Tutte's theorem (1947)}{10}{section*.4}
 \contentsline {paragraph}{Corollary 1}{10}{section*.5}
 \contentsline {paragraph}{Corollary 2}{10}{section*.6}
 \contentsline {paragraph}{Trick}{10}{section*.7}
-\contentsline {subsubsection}{Tutte's proof 2}{10}{section*.8}
+\contentsline {subsubsection}{Tutte's proof 2}{11}{section*.8}
 \contentsline {chapter}{\numberline {3}Connectivity}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}2-Connected graphs and subgraphs}{13}{section.3.1}
 \contentsline {subsubsection}{Theorem: ear decomposition of 2-connected graphs}{14}{section*.9}
 \contentsline {section}{\numberline {3.2}The structure of 3-connected graphs}{14}{section.3.2}
-\contentsline {subsubsection}{Lemma}{14}{section*.10}
-\contentsline {section}{\numberline {3.3}Menger's theorem}{14}{section.3.3}
+\contentsline {subsubsection}{Tutte's theorem}{14}{section*.10}
+\contentsline {section}{\numberline {3.3}Menger's theorem}{15}{section.3.3}
 \contentsline {chapter}{\numberline {4}Planar graphs}{17}{chapter.4}
 \contentsline {subsubsection}{Lemma 1}{17}{section*.11}
 \contentsline {subsubsection}{Lemma 2}{18}{section*.12}
