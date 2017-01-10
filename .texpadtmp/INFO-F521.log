@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  7 JAN 2017 20:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.6)  10 JAN 2017 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -587,24 +587,31 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip46
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 20.
- (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.aux (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter1.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter2.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter3.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter4.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter5.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter6.aux))
+ (/usr/local/texlive/2014basic/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count114
+\float@exts=\toks23
+\float@box=\box28
+\@float@everytoks=\toks24
+\@floatcapt=\box29
+) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.aux (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter1.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter2.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter3.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter4.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter5.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter6.aux))
 \openout1 = `INFO-F521.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 26.
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -644,17 +651,17 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count114
+\scratchcounter=\count115
 \scratchdimen=\dimen126
-\scratchbox=\box28
-\nofMPsegments=\count115
-\nofMParguments=\count116
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count117
+\scratchbox=\box30
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count118
 \MPscratchDim=\dimen127
-\MPnumerator=\count118
-\makeMPintoPDFobject=\count119
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -666,7 +673,7 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box29
+\AtBeginShipoutBox=\box31
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/latexconfig/color.cfg
@@ -674,17 +681,17 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
 )
-Package hyperref Info: Link coloring ON on input line 24.
+Package hyperref Info: Link coloring ON on input line 26.
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
  (/usr/local/texlive/2014basic/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count120
+\c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
  (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.out) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.out)
 \@outlinefile=\write3
 \openout3 = `INFO-F521.out'.
@@ -728,17 +735,14 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
  (/usr/local/texlive/2014basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [3])
 \tf@toc=\write4
 \openout4 = `INFO-F521.toc'.
 
- [3]
+ [4]
 \openout2 = `chapter1.aux'.
 
- (./chapter1.tex [4
-
-
-]
+ (./chapter1.tex
 Chapter 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
@@ -766,27 +770,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+[5
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
@@ -795,10 +807,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-) [6]
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+) [6] [7]
 \openout2 = `chapter2.aux'.
 
- (./chapter2.tex
+ (./chapter2.tex [8
+
+
+
+]
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -811,82 +837,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 16.
+(Font)              <9> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 16.
+(Font)              <5> on input line 17.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-
- []
-
-[7
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-<img/2-1.png, id=157, 249.93375pt x 121.45375pt>
-File: img/2-1.png Graphic file (type png)
- <use img/2-1.png>
-Package pdftex.def Info: img/2-1.png used on input line 42.
-(pdftex.def)             Requested size: 122.8317pt x 59.6889pt.
- [8 <./img/2-1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 120--122
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-) [11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+<img/2-1.png, id=342, 249.93375pt x 121.45375pt>
+File: img/2-1.png Graphic file (type png)
+ <use img/2-1.png>
+Package pdftex.def Info: img/2-1.png used on input line 43.
+(pdftex.def)             Requested size: 249.93314pt x 121.45343pt.
+ [10 <./img/2-1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+) [13]
 \openout2 = `chapter3.aux'.
 
- (./chapter3.tex [12
+ (./chapter3.tex [14
 
 
 
@@ -934,44 +951,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[13] <img/3-1.png, id=218, 436.63126pt x 159.59625pt>
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+<img/3-1.png, id=398, 436.63126pt x 159.59625pt>
 File: img/3-1.png Graphic file (type png)
  <use img/3-1.png>
-Package pdftex.def Info: img/3-1.png used on input line 33.
+Package pdftex.def Info: img/3-1.png used on input line 35.
 (pdftex.def)             Requested size: 436.63019pt x 159.59584pt.
 
-Overfull \hbox (27.19536pt too wide) in paragraph at lines 33--34
+Overfull \hbox (27.19536pt too wide) in paragraph at lines 35--36
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[14 <./img/3-1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+[16 <./img/3-1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--74
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
-) [15]
+) [17]
 \openout2 = `chapter4.aux'.
 
- (./chapter4.tex [16
+ (./chapter4.tex [18
 
 
 
@@ -996,22 +1018,115 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
  []
 
 
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 21.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+<img/4-1.png, id=445, 369.38pt x 244.915pt>
+File: img/4-1.png Graphic file (type png)
+ <use img/4-1.png>
+Package pdftex.def Info: img/4-1.png used on input line 109.
+(pdftex.def)             Requested size: 214.56744pt x 142.26378pt.
+ [21] <img/4-2.png, id=455, 427.5975pt x 280.04625pt>
+File: img/4-2.png Graphic file (type png)
+ <use img/4-2.png>
+Package pdftex.def Info: img/4-2.png used on input line 120.
+(pdftex.def)             Requested size: 217.23016pt x 142.26378pt.
+ [22 <./img/4-1.png> <./img/4-2.png>] <img/4-3.png, id=466, 123.46124pt x 80.3pt>
+File: img/4-3.png Graphic file (type png)
+ <use img/4-3.png>
+Package pdftex.def Info: img/4-3.png used on input line 132.
+(pdftex.def)             Requested size: 122.8317pt x 79.89545pt.
+ <img/4-4.png, id=467, 147.55125pt x 136.51pt>
+File: img/4-4.png Graphic file (type png)
+ <use img/4-4.png>
+Package pdftex.def Info: img/4-4.png used on input line 144.
+(pdftex.def)             Requested size: 122.8317pt x 113.64278pt.
+) [23 <./img/4-3.png> <./img/4-4.png>]
+\openout2 = `chapter5.aux'.
+
+ (./chapter5.tex [24
+
+
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
@@ -1021,192 +1136,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 88.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-
- []
-
-<img/4-1.png, id=271, 369.38pt x 244.915pt>
-File: img/4-1.png Graphic file (type png)
- <use img/4-1.png>
-Package pdftex.def Info: img/4-1.png used on input line 105.
-(pdftex.def)             Requested size: 122.8317pt x 81.44255pt.
- [19] <img/4-2.png, id=288, 427.5975pt x 280.04625pt>
-File: img/4-2.png Graphic file (type png)
- <use img/4-2.png>
-Package pdftex.def Info: img/4-2.png used on input line 116.
-(pdftex.def)             Requested size: 122.8317pt x 80.44643pt.
- <img/4-3.png, id=289, 123.46124pt x 80.3pt>
-File: img/4-3.png Graphic file (type png)
- <use img/4-3.png>
-Package pdftex.def Info: img/4-3.png used on input line 128.
-(pdftex.def)             Requested size: 122.8317pt x 79.89545pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/4-4.png, id=290, 147.55125pt x 136.51pt>
-File: img/4-4.png Graphic file (type png)
- <use img/4-4.png>
-Package pdftex.def Info: img/4-4.png used on input line 140.
-(pdftex.def)             Requested size: 122.8317pt x 113.64278pt.
- [20 <./img/4-1.png> <./img/4-2.png>]) [21 <./img/4-3.png> <./img/4-4.png>]
-\openout2 = `chapter5.aux'.
-
- (./chapter5.tex [22
-
-
-
-]
-Chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 175--179
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--166
-
- []
-
-) [27]
+) [29]
 \openout2 = `chapter6.aux'.
 
- (./chapter6.tex [28
+ (./chapter6.tex [30
 
 
 
@@ -1228,22 +1239,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
  []
 
 
+Package hyperref Warning: Glyph not defined in PD1 encoding,
+(hyperref)                removing `\H' on input line 34.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[29]
+[31]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 49.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[30]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 87--90
 
  []
@@ -1258,59 +1273,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--114
 
  []
 
-[31]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
-[32]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
 
-Overfull \hbox (93.82814pt too wide) in paragraph at lines 170--171
-[]\T1/lmr/m/n/10.95 Remark: it is not enough to just check pairs. For $\OML/lmm/m/it/10.95 S \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 3\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 4\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 5\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g$ \T1/lmr/m/n/10.95 and $\OML/lmm/m/it/10.95 A\OT1/lmr/m/n/10.95 (1\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 2\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 3\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 4)\OML/lmm/m/it/10.95 ; B[]\OT1/lmr/m/n/10.95 (2\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 4\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 5)\OML/lmm/m/it/10.95 ; B[]\OT1/lmr/m/n/10.95 (3\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 4\OML/lmm/m/it/10.95 ; \OT1/lmr/m/n/10.95 5)$\T1/lmr/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
-
- []
-
-
-Overfull \hbox (12.7617pt too wide) in paragraph at lines 197--198
+Overfull \hbox (12.7617pt too wide) in paragraph at lines 199--200
 \T1/lmr/m/it/10.95 If $\OML/lmm/m/it/10.95 A$ \T1/lmr/m/it/10.95 is a $\OML/lmm/m/it/10.95 k$\T1/lmr/m/it/10.95 -uniform hy-per-graph and each edge in-ter-sects $\OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 2[]\OML/lmm/m/it/10.95 =\OT1/lmr/m/n/10.95 2$ \T1/lmr/m/it/10.95 oth-ers, then $\OMS/lmsy/m/n/10.95 9\OT1/lmr/m/n/10.95 2\OMS/lmsy/m/n/10.95 ^^@$\T1/lmr/m/it/10.95 coloring
  []
 
+[35]) [36]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
+ [37
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
 
- []
-
-[33]) [34]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
  (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.aux (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter1.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter2.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter3.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter4.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter5.aux) (/Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/chapter6.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
 Package rerunfilecheck Info: File `INFO-F521.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
- 7439 strings out of 494448
- 107317 string characters out of 6166789
- 193484 words of memory out of 5000000
- 10382 multiletter control sequences out of 15000+600000
- 85502 words of font info for 66 fonts, out of 8000000 for 9000
+ 7536 strings out of 494448
+ 108924 string characters out of 6166789
+ 194928 words of memory out of 5000000
+ 10471 multiletter control sequences out of 15000+600000
+ 88500 words of font info for 67 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 29i,14n,30p,786b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,14n,33p,788b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.pdf (34 pages, 756604 bytes).
+Output written on /Users/charleshamesse/Documents/EPB/INFO-F521/.texpadtmp/INFO-F521.pdf (37 pages, 765990 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
- 206 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 718 PDF objects out of 1000 (max. 8388607)
+ 640 compressed objects within 7 object streams
+ 210 named destinations out of 1000 (max. 500000)
+ 471 words of extra memory for PDF output out of 10000 (max. 10000000)
 
